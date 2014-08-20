@@ -1,0 +1,65 @@
+//
+// Grid
+// use @function map-fetch($map, $keys)
+// grid's generator
+@for $i from 2 through map-fetch($grid, col-qty) {
+  	.col#{$i} { 
+  		width: (map-fetch($grid, col-width) * $i) + (map-fetch($grid, gutter) * $i) - map-fetch($grid, gutter); 
+  		@extend %base-col;
+  	}
+}
+
+@for $i from 2 through map-fetch($grid, col-qty) {
+	.col#{$i} > .container {
+		margin: 0 0 0 -#{map-fetch($grid, gutter) / 2};
+		width: ( map-fetch($grid, col-width) * $i ) + ( map-fetch($grid, gutter) * $i );
+	}
+}
+
+@for $i from 1 through map-fetch($grid, col-qty) {
+  	.pre#{$i} { 
+  		margin-left: (map-fetch($grid, col-width) * $i) + (map-fetch($grid, gutter) * $i) + (map-fetch($grid, gutter) / 2);
+  	}
+}
+
+@for $i from 1 through map-fetch($grid, col-qty) {
+  	.suf#{$i} { 
+  		margin-right: (map-fetch($grid, col-width) * $i) + (map-fetch($grid, gutter) * $i);
+  	}
+}
+
+$wrap: (map-fetch($grid, col-width) * map-fetch($grid, col-qty)) + map-fetch($grid, gutter) * (map-fetch($grid, col-qty) - 1);
+
+.container {
+	margin: 0 auto;
+	width: $wrap + map-fetch($grid, gutter);
+
+	&:after {
+	    clear: both;
+	    content: '';
+	    display: block;
+	}	
+}
+
+// grid's utilities
+.colr {
+  	float: right;
+ 	margin: 0 map-fetch($grid, gutter) / 2;
+}
+
+.alpha {
+  	margin-left: 0;
+}
+
+.omega {
+  	margin-right: 0;
+}
+
+.clear {
+  	clear: both;
+}
+
+.center {
+  	float: none;
+  	margin: 0 auto;
+}

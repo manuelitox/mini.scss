@@ -1,0 +1,37 @@
+// Sizes: width and height
+// @param $value ($width);
+// @param $value ($height);
+//
+// same values
+// @include sizes(2px);
+//
+// different values
+// @include sizes(2px, 4px);
+//
+@mixin sizes($width, $height:$width) {
+	height: $height;
+	width: $width;
+}
+
+// Border Radius
+// @param $value ($radius);
+// 
+// @include border-rounded(2px);
+// 
+@mixin border-rounded($radius) {
+	@include prefixer(border-radius, $radius);
+}
+
+// Prefixer
+// @param $property ($name);
+// @param $value ($value);
+// @param $prefixes (webkit | moz | ms | o);
+//
+// @include prefixer(animation, $options);
+//
+@mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
+  #{$property}: #{$value};
+  @each $prefix in $prefixes {
+    #{'-' + $prefix + '-' + $property}: #{$value};
+  }
+}
