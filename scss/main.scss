@@ -7,3 +7,19 @@
 // base
 @import 'base/grid';
 @import 'base/reset';
+
+@media (min-width: map-fetch($breakpoints, big-desktop)) and (min-device-width: map-fetch($breakpoints, big-desktop)) {
+
+}
+
+@media (min-width: map-fetch($breakpoints, desktop)) {
+	
+}
+
+@media (min-width: map-fetch($breakpoints, mobile)) and (max-width: (map-fetch($breakpoints, desktop) - 1)) {
+
+
+}
+@media (min-width: map-fetch($breakpoints, tablet)) and (max-width: (map-fetch($breakpoints, desktop) - 1)) {
+
+}

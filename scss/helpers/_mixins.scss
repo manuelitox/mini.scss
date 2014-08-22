@@ -30,8 +30,53 @@
 // @include prefixer(animation, $options);
 //
 @mixin prefixer($property, $value, $prefixes: webkit moz ms o) {
-  #{$property}: #{$value};
-  @each $prefix in $prefixes {
-    #{'-' + $prefix + '-' + $property}: #{$value};
-  }
+  	#{$property}: #{$value};
+  	@each $prefix in $prefixes {
+    	#{'-' + $prefix + '-' + $property}: #{$value};
+  	}
+}
+
+@mixin box-sizing($type: border-box) {
+	@include prefixer(box-sizing, border-box);
+}
+
+@mixin generate-col($col-qty, $gutter, $col-width) {
+	@for $i from 2 through $col-qty {
+		.col#{$i} {
+			float: left;
+			margin: 0 $gutter / 2;
+			width: ($col-width * $i) + ($gutter * $i) - $gutter;
+		}
+	}
+}
+
+@mixin generate-pre-col($col-qty, $gutter, $col-width) {
+    @for $i from 2 through ($col-qty - 2) {
+        .pre#{$i} { 
+            margin-left: ($col-width * $i) + ($gutter * $i) + ($gutter / 2);
+        }
+    }	
+}
+
+@mixin generate-suf-col($col-qty, $gutter, $col-width) {
+    @for $i from 2 through ($col-qty - 2) {
+        .suf#{$i} { 
+            margin-right: ($col-width * $i) + ($gutter * $i);
+        }
+    }
+}
+
+@mixin generate-container($col-qty, $gutter, $col-width) {
+    $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
+
+    .container {
+        margin: 0 auto;
+        width: $wrap + $gutter;
+
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }   
+    }
 }
