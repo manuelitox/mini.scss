@@ -36,10 +36,22 @@
   	}
 }
 
+// box sizing
+// @param $type ($name);
+//
+// @include box-sizing(border-box);
+//
 @mixin box-sizing($type: border-box) {
 	@include prefixer(box-sizing, border-box);
 }
 
+// Column's generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-col(12, 20px, 60px);
+//
 @mixin generate-col($col-qty, $gutter, $col-width) {
 	@for $i from 2 through $col-qty {
 		.col#{$i} {
@@ -50,6 +62,13 @@
 	}
 }
 
+// Prefix Column generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-pre-col(12, 20px, 60px);
+//
 @mixin generate-pre-col($col-qty, $gutter, $col-width) {
     @for $i from 2 through ($col-qty - 2) {
         .pre#{$i} { 
@@ -58,6 +77,13 @@
     }	
 }
 
+// Suffix Column generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-suf-col(12, 20px, 60px);
+//
 @mixin generate-suf-col($col-qty, $gutter, $col-width) {
     @for $i from 2 through ($col-qty - 2) {
         .suf#{$i} { 
@@ -66,6 +92,13 @@
     }
 }
 
+// Container's generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-container(12, 20px, 60px);
+//
 @mixin generate-container($col-qty, $gutter, $col-width) {
     $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
 
