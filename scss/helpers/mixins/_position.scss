@@ -1,0 +1,30 @@
+// Position
+// @param $position (static | absolute | fixed | relative | initial | inherit;);
+// @param $bottom;
+// @param $left;
+// @param $right;
+// @param $top;
+//
+// @include position(inherit, 10px, 10px, null, null);
+//
+@mixin position($position: relative, $bottom: null, $left: null, $right: null, $top: null) {
+    
+    @if ($position != static and $position != absolute and $position != fixed and $position != relative and $position != initial and $position != inherit) {
+        @error 'Position value (#{$position}) is unknown';
+    }
+    
+    position: $position;
+    
+    @if ($bottom != null) {
+        bottom: $bottom;
+    }
+    @if ($left != null) {
+        left: $left;
+    }
+    @if ($right != null) {
+        right: $right;
+    }
+    @if ($top != null) {
+        top: $top;
+    }
+}

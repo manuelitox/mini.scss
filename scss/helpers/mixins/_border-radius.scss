@@ -1,0 +1,8 @@
+// Border Radius
+// @param $value ($radius);
+// 
+// @include border-rounded(2px);
+// 
+@mixin border-rounded($radius) {
+	@include prefixer(border-radius, $radius);
+}

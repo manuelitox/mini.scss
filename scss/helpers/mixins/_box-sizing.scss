@@ -1,0 +1,8 @@
+// box sizing
+// @param $type ($name);
+//
+// @include box-sizing(border-box);
+//
+@mixin box-sizing($type: border-box) {
+	@include prefixer(box-sizing, border-box);
+}
