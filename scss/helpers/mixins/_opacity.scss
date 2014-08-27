@@ -1,0 +1,13 @@
+// * Opacity (Old IE disabled by default)
+// * @param $opac ($opacity);
+// * @param $ie (true);
+// *
+// * @include opacity(0.7, true);
+// *
+@mixin opacity($opac, $ie: false) {
+  	@if $ie {
+    	filter: alpha(opacity=$opac * 100);
+    	-ms-filter: alpha(opacity=$opac * 100);
+  	}
+  	opacity: $opac;
+}

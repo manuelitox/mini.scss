@@ -1,0 +1,17 @@
+// font face
+// @param $name ($name);
+//
+// @include font-face(name);
+//
+@mixin font-face($name) {
+	@font-face {
+		font-family: '#{$name}';
+		src: url('#{map-fetch($paths, fonts)}#{$name}.eot');
+		src: url('#{map-fetch($paths, fonts)}#{$name}.eot?#iefix') format('embedded-opentype'),
+			 url('#{map-fetch($paths, fonts)}#{$name}.woff') format('woff'),
+			 url('#{map-fetch($paths, fonts)}#{$name}.ttf') format('truetype'),
+			 url('#{map-fetch($paths, fonts)}#{$name}.svg##{$name}') format('svg');
+		font-style: normal; 
+		font-weight: normal;
+	}
+}
