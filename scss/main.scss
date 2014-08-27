@@ -1,3 +1,5 @@
+@import 'version';
+
 // helpers
 @import 'helpers/functions';
 @import 'helpers/vars';
@@ -8,6 +10,7 @@
 @import 'base/grid';
 @import 'base/reset';
 
+// media queries examples
 @media (min-width: map-fetch($breakpoints, big-desktop)) and (min-device-width: map-fetch($breakpoints, big-desktop)) {
 
 }
