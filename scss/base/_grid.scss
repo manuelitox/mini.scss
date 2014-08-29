@@ -71,10 +71,6 @@
         width: 33.33%;
     }
 
-    .full-tablet {
-        width: 100%;
-    }
-
     .half-tablet {
         float: left;
         width: 50%;
@@ -102,12 +98,16 @@
         width: 50%;
     }
 
-    .full-mobile {
-        width: 100%;
-    }
-
     .half-mobile {
         width: 50%;
+    }
+
+}
+
+@media (max-width: map-fetch($breakpoints, desktop) - 1) {
+    
+    .full {
+        width: 100%;
     }
 
 }

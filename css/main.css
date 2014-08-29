@@ -363,9 +363,6 @@
   .col2 {
     width: 33.33%; }
 
-  .full-tablet {
-    width: 100%; }
-
   .half-tablet {
     float: left;
     width: 50%; }
@@ -384,11 +381,11 @@
   .col2 {
     width: 50%; }
 
-  .full-mobile {
-    width: 100%; }
-
   .half-mobile {
     width: 50%; } }
+@media (max-width: 1023px) {
+  .full {
+    width: 100%; } }
 .colr {
   float: right;
   margin: 0 10px; }
