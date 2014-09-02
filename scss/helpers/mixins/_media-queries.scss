@@ -1,0 +1,33 @@
+// Generate Media Queries
+// @param $device;
+// 
+// @include breakpoint(desktop);
+// 
+
+@mixin breakpoint($device) {
+
+    @if ($device != 'big-desktop' and $device != 'desktop' and $device != 'tablet' and $device != 'mobile' and $device != 'responsive') {
+        @error 'Device value (#{$device}) is unknown';
+    }
+
+	@if $device == 'big-desktop' {
+		@media (min-width: map-fetch($breakpoints, big-desktop)) and (min-device-width: map-fetch($breakpoints, big-desktop)) { @content; }
+	}
+
+	@if $device == 'desktop' {
+		@media (min-width: map-fetch($breakpoints, desktop)) { @content; }
+	}
+
+	@if $device == 'tablet' {
+		@media (min-width: map-fetch($breakpoints, tablet)) and (max-width: (map-fetch($breakpoints, desktop) - 1)) { @content; }
+	}
+
+	@if $device == 'mobile' {
+		@media (min-width: map-fetch($breakpoints, mobile)) and (max-width: (map-fetch($breakpoints, tablet) - 1)) { @content; }
+	}
+
+	@if $device == 'responsive' {
+		@media (min-width: map-fetch($breakpoints, mobile)) and (max-width: map-fetch($breakpoints, desktop) - 1) { @content; }
+	}
+
+}

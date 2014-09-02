@@ -352,7 +352,10 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
-    -o-box-sizing: border-box; } }
+    -o-box-sizing: border-box; }
+
+  .full {
+    width: 100%; } }
 @media (min-width: 600px) and (max-width: 1023px) {
   .col12, .col11, .col10, .col9, .col8, .col7 {
     width: 100%; }
@@ -383,9 +386,6 @@
 
   .half-mobile {
     width: 50%; } }
-@media (max-width: 1023px) {
-  .full {
-    width: 100%; } }
 .colr {
   float: right;
   margin: 0 10px; }
