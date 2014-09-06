@@ -1,20 +1,3 @@
+// import all extends
 //
-// Extends:
-//
-
-//
-// Use @function map-fetch($map, $keys)
-// basic styles for grid's columns.
-//
-%base-col {
-	float: left;
-	margin: 0 map-fetch($grid, gutter) / 2;
-}
-
-//
-// Use @function map-fetch($map, $keys)
-// basic styles for buttons.
-//
-%base-btn {
-	
-}
+// @import 'extends/name'; 
