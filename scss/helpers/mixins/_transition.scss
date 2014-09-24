@@ -1,8 +1,8 @@
 // Transition (defaults to .15 sec)
 // @param $value ($speed | $property | $easing);
 // 
-// @include transition(height 200ms ease-out);
+// @include transition(200ms height ease-out);
 // 
 @mixin transition($value: .15s) {
-  	@include prefixer(transition, $value, webkit);
+  	@include prefixer(transition, $value);
 }
