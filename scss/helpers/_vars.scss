@@ -5,8 +5,18 @@
 $breakpoints: (
 	big-desktop: 1360px,
   	desktop: 1024px,
+  	responsive: 1023px,
   	tablet: 600px,
   	mobile: 240px
+);
+
+$ratios: (
+	retina-5k: 5,
+	retina-3k: 3,
+	retina-2k: 2,
+	medium-15k: 1.5,
+	medium-13k: 1.3,
+	low: 1
 );
 
 $grid: (
@@ -42,7 +52,7 @@ $buttons: (
 );
 
 $paths: (
-	img: '../img/',
-	sprite: '../img/sprite.png',
-	fonts: '../fonts/'
+	img: "../img/",
+	sprite: "../img/sprite.png",
+	fonts: "../fonts/"
 );
