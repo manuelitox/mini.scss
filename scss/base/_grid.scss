@@ -54,10 +54,6 @@
             @include box-sizing(border-box);
         }
     }    
-    
-    .full {
-        width: 100%;
-    }
 
 }
 
@@ -106,6 +102,13 @@
         width: 50%;
     }
 
+}
+
+// grid's utilities to responsive (tablet | mobile)
+@include breakpoint(responsive) {
+    .full {
+        width: 100%;
+    }
 }
 
 // grid's utilities
