@@ -1,7 +1,22 @@
 @import 'version';
 
+@import 'helpers/functions';
+@import 'helpers/vars';
+@import 'helpers/mixins';
+@import 'helpers/extends';
+
+// generate grid and utilities
 //
-// imported all styles to desktop for support IE < 9
-//
-// @include 'pages/home/_large-home.scss'; 
-//
+@include generate-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+
+@include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+
+@include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+
+@include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+
+.row {
+	padding: 40px 0;
+}
+
+// styles uniques to IE < 9
