@@ -15,8 +15,4 @@
 
 @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
 
-.row {
-	padding: 40px 0;
-}
-
 // styles uniques to IE < 9
