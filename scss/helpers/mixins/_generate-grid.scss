@@ -5,6 +5,7 @@
 //
 // @include generate-col(12, 20px, 60px);
 //
+
 @mixin generate-col($col-qty, $gutter, $col-width) {
 	@for $i from 2 through $col-qty {
 		.col#{$i} {
@@ -22,6 +23,7 @@
 //
 // @include generate-pre-col(12, 20px, 60px);
 //
+
 @mixin generate-pre-col($col-qty, $gutter, $col-width) {
     @for $i from 2 through ($col-qty - 2) {
         .pre#{$i} { 
@@ -37,6 +39,7 @@
 //
 // @include generate-suf-col(12, 20px, 60px);
 //
+
 @mixin generate-suf-col($col-qty, $gutter, $col-width) {
     @for $i from 2 through ($col-qty - 2) {
         .suf#{$i} { 
@@ -52,6 +55,7 @@
 //
 // @include generate-container(12, 20px, 60px);
 //
+
 @mixin generate-container($col-qty, $gutter, $col-width) {
     $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
 

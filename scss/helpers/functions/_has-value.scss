@@ -1,0 +1,15 @@
+// An easy way to check if list has the value 
+// @param $args (elements list)
+// @param $type (type)
+//
+// has-value($list, $type)
+//
+
+@function has-value($args, $type, $value: '') {
+	@each $arg in $args {
+		@if $arg == $type {
+			$value: $type;
+		}
+	}
+	@return $value;
+}

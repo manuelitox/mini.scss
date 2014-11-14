@@ -1,7 +1,8 @@
-// * Disallow user selection
-// *
-// * @include noselect;
-// *
+// Disallow user selection
+//
+// @include noselect;
+//
+
 @mixin noselect {
   	-webkit-touch-callout: none;
   	@include prefixer(user-select, none, webkit ms);

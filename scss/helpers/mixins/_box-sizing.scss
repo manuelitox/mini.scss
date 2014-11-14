@@ -1,8 +1,18 @@
 // box sizing
-// @param $type ($name);
+// @param $type (content-box | border-box | initial | inherit);
 //
+// use function has-value.
 // @include box-sizing(border-box);
 //
+
 @mixin box-sizing($type: border-box) {
-	@include prefixer(box-sizing, border-box);
+
+	$args: content-box, border-box, initial, inherit;
+
+	@if has-value($args, $type) == $type {
+		@include prefixer(box-sizing, $type);
+	} @else {
+		@warn 'Type value (#{$type}) is unknown';
+	}
+
 }

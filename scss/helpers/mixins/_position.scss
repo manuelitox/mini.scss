@@ -1,5 +1,5 @@
 // Position
-// @param $value (static | absolute | fixed | relative | initial | inherit);
+// @param $type (static | absolute | fixed | relative | initial | inherit);
 // @param $bottom;
 // @param $left;
 // @param $right;
@@ -7,34 +7,28 @@
 //
 // @include position(inherit, 10px, 10px, null, null);
 //
-@mixin position($value: relative, $bottom: null, $left: null, $right: null, $top: null) {
-    
-    // all posible values to position
-    // @map $values (static | absolute | fixed | relative | initial | inherit);
-    $values: (
-        static: static,
-        absolute: absolute,
-        fixed: fixed,
-        relative: relative,
-        initial: initial,
-        inherit: inherit
-    );
 
-    @if not map-has-key($values, $value) {
-        @warn 'Position value (#{$value}) is unknown';
-    } @else {
-        position: $value;
-        @if ($bottom != null) {
-            bottom: $bottom;
-        }
-        @if ($left != null) {
-            left: $left;
-        }
-        @if ($right != null) {
-            right: $right;
-        }
-        @if ($top != null) {
-            top: $top;
-        }
+@mixin position($type: relative, $bottom: null, $left: null, $right: null, $top: null) {
+    
+    $args: static, absolute, fixed, relative, initial, inherit;
+
+    @if ($bottom != null) {
+        bottom: $bottom;
     }
+    @if ($left != null) {
+        left: $left;
+    }
+    @if ($right != null) {
+        right: $right;
+    }
+    @if ($top != null) {
+        top: $top;
+    }   
+
+    @if has-value($args, $type) == $type {
+        position: $type;     
+    } @else {
+        @warn 'Position value (#{$type}) is unknown';
+    }
+
 }

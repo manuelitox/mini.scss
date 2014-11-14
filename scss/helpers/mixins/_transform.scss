@@ -3,7 +3,8 @@
 // @param $value ($value);
 // 
 // @include transform(scale, 1.25);
-// 
+//
+
 @mixin transform($transforms) {
   	@include prefixer(transform, $transforms);
 }
@@ -13,6 +14,7 @@
 // 
 // @include scale(1.25);
 // 
+
 @mixin scale($scale) {
 	@include transform(scale(#{$scale}));
 }
@@ -22,6 +24,7 @@
 // 
 // @include rotate(1.25);
 // 
+
 @mixin rotate($deg) {
 	@include transform(rotate(#{$deg}));
 }
