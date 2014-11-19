@@ -38,15 +38,6 @@ p {
 	margin: 0 0 20px 0;
 }
 
-a {
-	color: #000;
-	text-decoration: none;
-	
-	&:hover {
-		text-decoration: underline;
-	}
-}
-
 img {
 	height: auto;
 	max-width: 100%;
@@ -56,10 +47,19 @@ figure {
 	margin: 0 0 20px 0;
 	padding: 0;
 	text-align: center;
+}
 
-	figcaption {
-		display: block;
-		text-align: center;
-		font-size: 14px;
+figcaption {
+	display: block;
+	text-align: center;
+	font-size: 14px;
+}
+
+a {
+	color: #000;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: underline;
 	}
 }
