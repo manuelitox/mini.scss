@@ -104,32 +104,8 @@
 
 }
 
-// grid's utilities to responsive (tablet | mobile)
 @include breakpoint(responsive) {
     .full {
         width: 100%;
     }
-}
-
-// grid's utilities
-.colr {
-  	float: right;
- 	margin: 0 map-fetch($grid, gutter) / 2;
-}
-
-.alpha {
-  	margin-left: 0;
-}
-
-.omega {
-  	margin-right: 0;
-}
-
-.clear {
-  	clear: both;
-}
-
-.center {
-  	float: none;
-  	margin: 0 auto;
 }

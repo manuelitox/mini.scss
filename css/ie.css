@@ -115,4 +115,23 @@
     content: '';
     display: block; }
 
+.clear {
+  clear: both; }
+
+.colr {
+  float: right;
+  margin: 0 10px; }
+
+.alpha {
+  margin-left: 0; }
+
+.omega {
+  margin-right: 0; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-right {
+  text-align: right; }
+
 /*# sourceMappingURL=ie.css.map */

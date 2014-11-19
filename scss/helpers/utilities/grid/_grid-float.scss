@@ -1,0 +1,7 @@
+// floating at right to columns
+// 
+
+.colr {
+  	float: right;
+ 	margin: 0 map-fetch($grid, gutter) / 2;
+}

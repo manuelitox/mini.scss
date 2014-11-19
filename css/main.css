@@ -440,6 +440,9 @@ a {
 @media (min-width: 240px) and (max-width: 1023px) {
   .full {
     width: 100%; } }
+.clear {
+  clear: both; }
+
 .colr {
   float: right;
   margin: 0 10px; }
@@ -450,11 +453,10 @@ a {
 .omega {
   margin-right: 0; }
 
-.clear {
-  clear: both; }
+.txt-center {
+  text-align: center; }
 
-.center {
-  float: none;
-  margin: 0 auto; }
+.txt-right {
+  text-align: right; }
 
 /*# sourceMappingURL=main.css.map */

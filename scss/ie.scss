@@ -16,3 +16,6 @@
 @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
 
 // styles uniques to IE < 9
+
+// import to utilities 
+@import 'helpers/utilities';
