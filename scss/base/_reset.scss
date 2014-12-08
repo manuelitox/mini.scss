@@ -1,36 +1,45 @@
+html {
+
+	@include breakpoint(desktop) {
+		font-size: 16px;
+	}
+
+	@include breakpoint(responsive) {
+		font-size: 14px;
+	}
+}
+
 body {
 	color: map-fetch($colors, themes public text);
-	font-size: 16px;
-	line-height: 24px;	
+	line-height: 1.5;
 	margin: 0;
 	padding: 0;
 }
 
 h1 {
 	color: map-fetch($colors, themes public text);
+	font-family: 2rem;
 	font-weight: normal;
 	margin: 0;
 }
 
 h2 {
 	color: map-fetch($colors, themes public text);
-	font-size: 22px;
+	font-size: 1.6rem;
 	font-weight: normal;
-	line-height: 30px;
 	margin: 0 0 20px 0;
 }
 
 h3 {
 	color: map-fetch($colors, themes public text);
-	font-size: 18px;
-	margin: 0;
+	font-size: 1.4rem;
+	margin: 0 0 10px;
 }
 
 h4 {
 	color: map-fetch($colors, themes public text);
-	font-size: 12px;
+	font-size: 0.9rem;
 	font-weight: normal;
-	line-height: 12px;
 	margin: 0 0 10px 0;
 }
 
