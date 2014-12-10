@@ -1,9 +1,8 @@
-@import 'version';
+@import "version";
 
-@import 'helpers/functions';
-@import 'helpers/vars';
-@import 'helpers/mixins';
-@import 'helpers/extends';
+@import "helpers/functions";
+@import "helpers/vars";
+@import "helpers/mixins";
 
 // generate grid and utilities
 //
@@ -17,5 +16,6 @@
 
 // styles uniques to IE < 9
 
-// import to utilities 
-@import 'helpers/utilities';
+// import to utilities and extends
+@import "helpers/extends";
+@import "helpers/utilities";
