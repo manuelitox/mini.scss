@@ -72,3 +72,15 @@ a {
 		text-decoration: underline;
 	}
 }
+
+.blog {
+	@include generate-container();
+
+	.articles {
+		@include generate-col(8, "two-thirds", "full");
+	}
+
+	aside {
+		@include generate-col(4, "one-third", "full");
+	}
+}

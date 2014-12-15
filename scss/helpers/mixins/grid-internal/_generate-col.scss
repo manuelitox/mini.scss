@@ -1,0 +1,44 @@
+// width Container
+// use functions calc-col-fixed and calc-col-percentage.
+//
+// @param $col-qty
+// @param $tablet-option (full | half | two-thirds | one-third)
+// @param $mobile-option (full | half | two-thirds | one-third)
+// 
+// @include generate-col(12, "half", "full");
+// 
+
+@mixin generate-col($col-qty: 12, $tablet-option: "full", $mobile-option: null) {
+	float: left;
+
+	@include breakpoint(desktop) {
+		margin: 0 map-get($grid, gutter) / 2;
+		width: calc-col-fixed($col-qty, "normal");
+	}
+
+	@include breakpoint(big-desktop) {
+		margin: 0 map-get($grid, big-gutter) / 2;
+		width: calc-col-fixed($col-qty, "big");
+	}
+
+	@include breakpoint(responsive) {
+		padding: 10px;
+
+		@if not has-mobile-option($mobile-option) {
+			width: calc-col-percentage($tablet-option);			
+		}
+
+		@include box-sizing();
+	}
+
+	@if has-mobile-option($mobile-option) {
+
+		@include breakpoint(tablet) {
+			width: calc-col-percentage($tablet-option);
+		}	
+
+		@include breakpoint(mobile) {
+			width: calc-col-percentage($mobile-option);
+		}
+	}
+}

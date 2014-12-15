@@ -1,0 +1,20 @@
+// Calculate column width fixed
+//
+// @param $col-qty
+// @param $type (normal | big)
+//
+// calc-col-fixed($col-qty);
+//
+
+@function calc-col-fixed($col-qty, $type: "normal", $width: 0, $gutter: 0) {
+	@if $type == "normal" {
+		$width: map-get($grid, col-width);
+		$gutter: map-get($grid, gutter);
+	} @else if $type == "big" {
+		$width: map-get($grid, big-col-width);
+		$gutter: map-get($grid, big-gutter);
+	}
+
+	$full: ($width * $col-qty) + ($gutter * $col-qty) - $gutter;
+	@return $full;
+}
