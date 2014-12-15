@@ -1,0 +1,22 @@
+// Container's generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-container(12, 20px, 60px);
+//
+
+@mixin generate-container($col-qty, $gutter, $col-width) {
+    $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
+
+    .container {
+        margin: 0 auto;
+        width: $wrap + $gutter;
+
+        &:after {
+            clear: both;
+            content: '';
+            display: block;
+        }   
+    }
+}

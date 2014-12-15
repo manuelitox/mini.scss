@@ -1,0 +1,15 @@
+// Suffix Column generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-suf-col(12, 20px, 60px);
+//
+
+@mixin generate-suf-col($col-qty, $gutter, $col-width) {
+    @for $i from 2 through ($col-qty - 2) {
+        .suf#{$i} { 
+            margin-right: ($col-width * $i) + ($gutter * $i);
+        }
+    }
+}

@@ -1,0 +1,15 @@
+// Prefix Column generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-pre-col(12, 20px, 60px);
+//
+
+@mixin generate-pre-col($col-qty, $gutter, $col-width) {
+    @for $i from 2 through ($col-qty - 2) {
+        .pre#{$i} { 
+            margin-left: ($col-width * $i) + ($gutter * $i) + ($gutter / 2);
+        }
+    }	
+}

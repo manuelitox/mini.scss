@@ -1,0 +1,17 @@
+// Column's generate
+// @param $col-qty (column's amount);
+// @param $gutter (gutter);
+// @param $col-width (column width);
+//
+// @include generate-col(12, 20px, 60px);
+//
+
+@mixin generate-col($col-qty, $gutter, $col-width) {
+	@for $i from 2 through $col-qty {
+		.col#{$i} {
+			float: left;
+			margin: 0 $gutter / 2;
+			width: ($col-width * $i) + ($gutter * $i) - $gutter;
+		}
+	}
+}

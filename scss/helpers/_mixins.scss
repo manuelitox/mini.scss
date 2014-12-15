@@ -5,7 +5,10 @@
 @import "mixins/prefixer";
 @import "mixins/border-radius";
 @import "mixins/box-sizing";
-@import "mixins/generate-grid";
+@import "mixins/grid/generate-container";
+@import "mixins/grid/generate-col";
+@import "mixins/grid/generate-pre-col";
+@import "mixins/grid/generate-suf-col";
 @import "mixins/media-queries";
 @import "mixins/pixel-ratio";
 @import "mixins/position";

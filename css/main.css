@@ -58,6 +58,14 @@ a {
     text-decoration: underline; }
 
 @media (min-width: 1024px) {
+  .container {
+    margin: 0 auto;
+    width: 960px; }
+    .container:after {
+      clear: both;
+      content: '';
+      display: block; }
+
   .col2 {
     float: left;
     margin: 0 10px;
@@ -111,70 +119,16 @@ a {
   .col12 {
     float: left;
     margin: 0 10px;
-    width: 940px; }
-
-  .pre2 {
-    margin-left: 170px; }
-
-  .pre3 {
-    margin-left: 250px; }
-
-  .pre4 {
-    margin-left: 330px; }
-
-  .pre5 {
-    margin-left: 410px; }
-
-  .pre6 {
-    margin-left: 490px; }
-
-  .pre7 {
-    margin-left: 570px; }
-
-  .pre8 {
-    margin-left: 650px; }
-
-  .pre9 {
-    margin-left: 730px; }
-
-  .pre10 {
-    margin-left: 810px; }
-
-  .suf2 {
-    margin-right: 160px; }
-
-  .suf3 {
-    margin-right: 240px; }
-
-  .suf4 {
-    margin-right: 320px; }
-
-  .suf5 {
-    margin-right: 400px; }
-
-  .suf6 {
-    margin-right: 480px; }
-
-  .suf7 {
-    margin-right: 560px; }
-
-  .suf8 {
-    margin-right: 640px; }
-
-  .suf9 {
-    margin-right: 720px; }
-
-  .suf10 {
-    margin-right: 800px; }
-
+    width: 940px; } }
+@media (min-width: 1360px) and (min-device-width: 1360px) {
   .container {
     margin: 0 auto;
-    width: 960px; }
+    width: 1200px; }
     .container:after {
       clear: both;
       content: '';
-      display: block; } }
-@media (min-width: 1360px) and (min-device-width: 1360px) {
+      display: block; }
+
   .col2 {
     float: left;
     margin: 0 15px;
@@ -228,69 +182,7 @@ a {
   .col12 {
     float: left;
     margin: 0 15px;
-    width: 1170px; }
-
-  .pre2 {
-    margin-left: 215px; }
-
-  .pre3 {
-    margin-left: 315px; }
-
-  .pre4 {
-    margin-left: 415px; }
-
-  .pre5 {
-    margin-left: 515px; }
-
-  .pre6 {
-    margin-left: 615px; }
-
-  .pre7 {
-    margin-left: 715px; }
-
-  .pre8 {
-    margin-left: 815px; }
-
-  .pre9 {
-    margin-left: 915px; }
-
-  .pre10 {
-    margin-left: 1015px; }
-
-  .suf2 {
-    margin-right: 200px; }
-
-  .suf3 {
-    margin-right: 300px; }
-
-  .suf4 {
-    margin-right: 400px; }
-
-  .suf5 {
-    margin-right: 500px; }
-
-  .suf6 {
-    margin-right: 600px; }
-
-  .suf7 {
-    margin-right: 700px; }
-
-  .suf8 {
-    margin-right: 800px; }
-
-  .suf9 {
-    margin-right: 900px; }
-
-  .suf10 {
-    margin-right: 1000px; }
-
-  .container {
-    margin: 0 auto;
-    width: 1200px; }
-    .container:after {
-      clear: both;
-      content: '';
-      display: block; } }
+    width: 1170px; } }
 @media (min-width: 240px) and (max-width: 1023px) {
   .wrap {
     overflow: hidden;

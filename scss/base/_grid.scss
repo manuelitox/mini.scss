@@ -7,25 +7,23 @@
 
 @include breakpoint(desktop) {
 
+    @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));    
     @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
-
-    @include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
-
-    @include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
-
-    @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+    
+    // optionals
+    //@include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+    //@include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
 
 }
 
 @include breakpoint(big-desktop) {
 
-    @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
-
-    @include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
-
-    @include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
-
     @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
+    @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
+    
+    // optionals
+    //@include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
+    //@include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
 
 }
 
