@@ -1,16 +1,9 @@
 .blog {
-  margin: 0 auto;
   width: 960px; }
-  .blog:after {
-    clear: both;
-    content: '';
-    display: block; }
   .blog .articles {
-    float: left;
     margin: 0 10px;
     width: 620px; }
   .blog aside {
-    float: left;
     margin: 0 10px;
     width: 300px; }
 
