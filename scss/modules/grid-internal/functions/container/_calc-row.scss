@@ -1,0 +1,11 @@
+// Calculate row of container
+//
+// @param $base
+// @param $amount
+//
+// calc-row($base, $amount);
+//
+
+@function calc-row($base, $amount) {
+	@return $base * $amount;
+}

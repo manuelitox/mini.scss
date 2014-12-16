@@ -3,14 +3,10 @@
 // @import "mixins/name"; 
 
 @import "mixins/prefixer";
-@import "mixins/border-radius";
 @import "mixins/box-sizing";
-@import "mixins/grid/generate-container";
-@import "mixins/grid/generate-col";
-@import "mixins/grid/generate-pre-col";
-@import "mixins/grid/generate-suf-col";
 @import "mixins/media-queries";
 @import "mixins/pixel-ratio";
+@import "mixins/border-radius";
 @import "mixins/position";
 @import "mixins/sizes";
 @import "mixins/font-face";

@@ -1,0 +1,31 @@
+// width Container
+// use calc-container function.
+//
+// @include container();
+// 
+
+@mixin container() {
+	margin: 0 auto;
+	  
+	&:after {
+	    clear: both;  
+	    content: '';
+	    display: block;
+	}
+
+	@include breakpoint(desktop) {
+		width: calc-container(map-get($grid, col-width), map-get($grid, col-qty), map-get($grid, gutter));
+	}
+
+	@include breakpoint(big-desktop) {
+		width: calc-container(map-get($grid, big-col-width), map-get($grid, col-qty), map-get($grid, big-gutter));
+	}  
+
+	@include breakpoint(responsive) {
+		width: 100%;
+	} 	
+}
+
+@mixin container-ie() {
+	width: calc-container(map-get($grid, col-width), map-get($grid, col-qty), map-get($grid, gutter));
+}

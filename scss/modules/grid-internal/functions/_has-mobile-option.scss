@@ -1,0 +1,13 @@
+// An easy way to check if mobile option have one value.
+// @param $mobile-option
+//
+// has-mobile-option($list, $type)
+//
+
+@function has-mobile-option($mobile-option) {
+	$value: true;
+	@if $mobile-option == null {
+		$value: false;
+	}
+	@return $value;
+}

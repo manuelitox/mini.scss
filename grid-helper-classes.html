@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="application-name" content="Mini.scss">
+	<meta name="author" content="Manuel Gonzalez">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+	<meta name="robots" content="all">
+	<meta name="description" content="mini framework writen in SASS">
+	<meta name="keywords" content="Mini.scss, scss, sass, responsive"> 
+	
+	<title>Mini-CSS</title>
+	
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+    <!--[if (lt IE 9) & (!IEMobile)]>
+        <link rel="stylesheet" href="css/ie.css">
+        <script src="http://modernizr.com/downloads/modernizr-latest.js"></script>
+    <![endif]-->
+
+	<style>
+		.box {
+			background-color: #ddd;
+			height: 40px;
+			line-height: 40px;
+			margin-bottom: 10px;
+			margin-top: 10px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="col12">
+				<h1>Probando viejo sistema Grid.</h1>
+			</div>
+			<div class="col12">
+				<div class="box">col12</div>
+			</div>
+			<div class="col6 one-third-tablet half-mobile">
+				<div class="box">col4</div>				
+			</div>
+			<div class="col6 one-third-tablet half-mobile">
+				<div class="box">col4</div>
+			</div>
+			<div class="col6 one-third-tablet full">
+				<div class="box">col4</div>
+			</div>
+		</div>
+	</section>
+</body>
+</html>
