@@ -22,7 +22,7 @@
 	}
 
 	@include breakpoint(responsive) {
-		padding: 10px;
+		padding: 0 10px;
 
 		@if not has-mobile-option($mobile-option) {
 			width: calc-col-percentage($tablet-option);			

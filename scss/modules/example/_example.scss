@@ -2,7 +2,11 @@
 
 .blog {
 	background-color: #eee;
-	@include container();
+	@include row();
+
+	.wrap-blog {
+		@include container();		
+	}
 
 	.articles {
 		@include col(8, "two-thirds", "full");
