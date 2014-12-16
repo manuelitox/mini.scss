@@ -1,0 +1,40 @@
+// generate gutter extra
+// use calc-gutter-extra function
+//
+// @param $col
+// @param $type (pre | suf)
+// 
+// @include generate-gutter-extra(12, "half", "full");
+// 
+
+@mixin generate-gutter-extra($col: 12, $type: "pre") {
+
+	@if $col > map-get($grid, col-qty) {
+		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-get($grid, col-qty)})";
+	}
+
+	@if $type == "pre" {
+	
+		@include breakpoint(desktop) {
+			margin-left: calc-gutter-extra($col, map-get($grid, col-width), map-get($grid, gutter));
+		}
+
+		@include breakpoint(big-desktop) {
+			margin-left: calc-gutter-extra($col, map-get($grid, big-col-width), map-get($grid, big-gutter));
+		}
+	
+	} @else if $type == "suf" {
+	
+		@include breakpoint(desktop) {
+			float: right;
+			margin-right: calc-gutter-extra($col, map-get($grid, col-width), map-get($grid, gutter));
+		}
+
+		@include breakpoint(big-desktop) {
+			margin-right: calc-gutter-extra($col, map-get($grid, big-col-width), map-get($grid, big-gutter));
+		}
+
+	} @else {
+		@error 'Type value (#{$type}) is unknown';
+	}
+}

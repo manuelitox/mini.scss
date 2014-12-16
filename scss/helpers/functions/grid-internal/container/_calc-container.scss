@@ -8,6 +8,5 @@
 //
 
 @function calc-container($col-width, $col-qty, $gutter) {
-	$width: ($col-width * $col-qty) + $gutter * ($col-qty - 1) + $gutter;
-  	@return $width;
+  	@return ($col-width * $col-qty) + $gutter * ($col-qty - 1) + $gutter;
 }

@@ -15,6 +15,5 @@
 		$gutter: map-get($grid, big-gutter);
 	}
 
-	$full: ($width * $col-qty) + ($gutter * $col-qty) - $gutter;
-	@return $full;
+	@return ($width * $col-qty) + ($gutter * $col-qty) - $gutter;
 }
