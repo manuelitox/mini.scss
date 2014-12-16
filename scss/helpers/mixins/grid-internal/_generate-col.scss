@@ -5,10 +5,10 @@
 // @param $tablet-option (full | half | two-thirds | one-third)
 // @param $mobile-option (full | half | two-thirds | one-third)
 // 
-// @include generate-col(12, "half", "full");
+// @include col(12, "half", "full");
 // 
 
-@mixin generate-col($col-qty: 12, $tablet-option: "full", $mobile-option: null) {
+@mixin col($col-qty: 12, $tablet-option: "full", $mobile-option: null) {
 	float: left;
 
 	@include breakpoint(desktop) {

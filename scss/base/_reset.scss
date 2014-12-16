@@ -74,13 +74,13 @@ a {
 }
 
 .blog {
-	@include generate-container();
+	@include container();
 
 	.articles {
-		@include generate-col(8, "two-thirds", "full");
+		@include col(8, "two-thirds", "full");
 	}
 
 	aside {
-		@include generate-col(4, "one-third", "full");
+		@include col(4, "one-third", "full");
 	}
 }

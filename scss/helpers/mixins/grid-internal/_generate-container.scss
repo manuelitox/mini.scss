@@ -1,10 +1,10 @@
 // width Container
 // use calc-container function.
 //
-// @include width-container();
+// @include container();
 // 
 
-@mixin generate-container() {
+@mixin container() {
 	margin: 0 auto;
 	  
 	&:after {
