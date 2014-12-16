@@ -57,7 +57,14 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.txt-center {
+  text-align: center; }
+
+.txt-right {
+  text-align: right; }
+
 .blog {
+  background-color: #eee;
   margin: 0 auto; }
   .blog:after {
     clear: both;
@@ -120,11 +127,5 @@ a {
     @media (min-width: 240px) and (max-width: 599px) {
       .blog aside {
         width: 100%; } }
-
-.txt-center {
-  text-align: center; }
-
-.txt-right {
-  text-align: right; }
 
 /*# sourceMappingURL=main.css.map */

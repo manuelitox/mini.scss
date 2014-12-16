@@ -72,15 +72,3 @@ a {
 		text-decoration: underline;
 	}
 }
-
-.blog {
-	@include container();
-
-	.articles {
-		@include col(8, "two-thirds", "full");
-	}
-
-	aside {
-		@include col(4, "one-third", "full");
-	}
-}
