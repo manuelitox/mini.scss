@@ -10,7 +10,7 @@ Ligera librería que agrupa un conjunto de buenas prácticas que nos permiten co
 		
 		<code>$ git clone https://github.com/manuelitox/mini.scss.git</code>
 
-	2. Descargar el paquete con la [versión 0.6](https://github.com/manuelitox/mini.scss/releases/tag/0.6) 
+	2. Descargar el paquete con la [versión 1.0](https://github.com/manuelitox/mini.scss/releases/tag/1.0) 
 
 
 * Mediante Bower: 
