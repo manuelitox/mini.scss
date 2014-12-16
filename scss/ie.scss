@@ -7,13 +7,36 @@
 // generate grid and utilities
 //
 
+// Grid system helper classes
+// For enable grid system helper classes, you have than uncomment the next four lines.
+// ****************************************************************************************************************
+
+// @import "modules/grid-helper-classes/mixins/base";
+// @import "modules/grid-helper-classes/utilities/base";
 // @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
 // @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
-// optionals
+
+// optionals by grid system helper classes
 // @include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
 // @include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+// ****************************************************************************************************************
+
+// Grid system internal 
+@import "modules/grid-internal/base";
 
 // styles uniques to IE < 9
+
+.blog {
+	@include container-ie();
+
+	.articles {
+		@include col-ie(8);
+	}
+
+	aside {
+		@include col-ie(4);
+	}
+}
 
 // import to utilities and extends
 @import "helpers/extends";

@@ -42,3 +42,10 @@
 		}
 	}
 }
+
+// by IE8
+@mixin col-ie($col-qty: 12) {
+	float: left;
+	margin: 0 map-get($grid, gutter) / 2;
+	width: calc-col-fixed($col-qty, "normal");
+}

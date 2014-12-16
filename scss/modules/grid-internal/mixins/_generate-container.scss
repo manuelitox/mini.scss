@@ -25,3 +25,14 @@
 		width: 100%;
 	} 	
 }
+
+@mixin container-ie() {
+	margin: 0 auto;
+	width: calc-container(map-get($grid, col-width), map-get($grid, col-qty), map-get($grid, gutter));
+
+	&:after {
+	    clear: both;  
+	    content: '';
+	    display: block;
+	}
+}
