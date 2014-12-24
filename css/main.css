@@ -6,30 +6,25 @@
     font-size: 14px; } }
 
 body {
-  color: #000;
   line-height: 1.5;
   margin: 0;
   padding: 0; }
 
 h1 {
-  color: #000;
   font-size: 2rem;
   font-weight: normal;
   margin: 0; }
 
 h2 {
-  color: #000;
   font-size: 1.6rem;
   font-weight: normal;
   margin: 0 0 20px 0; }
 
 h3 {
-  color: #000;
   font-size: 1.4rem;
   margin: 0 0 10px; }
 
 h4 {
-  color: #000;
   font-size: 0.9rem;
   font-weight: normal;
   margin: 0 0 10px 0; }
@@ -52,7 +47,6 @@ figcaption {
   font-size: 14px; }
 
 a {
-  color: #000;
   text-decoration: none; }
   a:hover {
     text-decoration: underline; }

@@ -10,34 +10,29 @@ html {
 }
 
 body {
-	color: map-fetch($colors, themes public text);
 	line-height: 1.5;
 	margin: 0;
 	padding: 0;
 }
 
 h1 {
-	color: map-fetch($colors, themes public text);
 	font-size: 2rem;
 	font-weight: normal;
 	margin: 0;
 }
 
 h2 {
-	color: map-fetch($colors, themes public text);
 	font-size: 1.6rem;
 	font-weight: normal;
 	margin: 0 0 20px 0;
 }
 
 h3 {
-	color: map-fetch($colors, themes public text);
 	font-size: 1.4rem;
 	margin: 0 0 10px;
 }
 
 h4 {
-	color: map-fetch($colors, themes public text);
 	font-size: 0.9rem;
 	font-weight: normal;
 	margin: 0 0 10px 0;
@@ -65,7 +60,6 @@ figcaption {
 }
 
 a {
-	color: #000;
 	text-decoration: none;
 	
 	&:hover {
