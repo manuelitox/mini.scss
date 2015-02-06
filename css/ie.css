@@ -1,11 +1,11 @@
 .blog {
-  width: 960px; }
+  width: 60rem; }
   .blog .articles {
-    margin: 0 10px;
-    width: 620px; }
+    margin: 0 0.625rem;
+    width: 38.75rem; }
   .blog aside {
-    margin: 0 10px;
-    width: 300px; }
+    margin: 0 0.625rem;
+    width: 18.75rem; }
 
 .txt-center {
   text-align: center; }

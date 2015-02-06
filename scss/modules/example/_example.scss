@@ -1,3 +1,15 @@
 .example {
-	// stuff
+	@include container();
+
+	.wrap-example {
+		@include row();
+	}
+
+	.articles {
+		@include col(8, "two-thirds", "full");
+	}
+
+	aside {
+		@include col(4, "one-third", "full");
+	}
 }

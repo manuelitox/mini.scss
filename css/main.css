@@ -1,7 +1,7 @@
-@media (min-width: 1024px) {
+@media (min-width: 64rem) {
   html {
     font-size: 16px; } }
-@media (min-width: 240px) and (max-width: 1023px) {
+@media (min-width: 15rem) and (max-width: 63.9375rem) {
   html {
     font-size: 14px; } }
 
@@ -56,5 +56,74 @@ a {
 
 .txt-right {
   text-align: right; }
+
+.example {
+  margin: 0 auto; }
+  .example:after {
+    clear: both;
+    content: '';
+    display: block; }
+  @media (min-width: 64rem) {
+    .example {
+      width: 60rem; } }
+  @media (min-width: 85rem) and (min-device-width: 85rem) {
+    .example {
+      width: 75rem; } }
+  @media (min-width: 15rem) and (max-width: 63.9375rem) {
+    .example {
+      width: 100%; } }
+  .example .wrap-example {
+    padding: 20px 0; }
+    @media (min-width: 85rem) and (min-device-width: 85rem) {
+      .example .wrap-example {
+        padding: 30px 0; } }
+  .example .articles {
+    float: left; }
+    @media (min-width: 64rem) {
+      .example .articles {
+        margin: 0 0.625rem;
+        width: 38.75rem; } }
+    @media (min-width: 85rem) and (min-device-width: 85rem) {
+      .example .articles {
+        margin: 0 0.9375rem;
+        width: 48.125rem; } }
+    @media (min-width: 15rem) and (max-width: 63.9375rem) {
+      .example .articles {
+        padding: 0 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box; } }
+    @media (min-width: 37.5rem) and (max-width: 63.9375rem) {
+      .example .articles {
+        width: 66.66%; } }
+    @media (min-width: 15rem) and (max-width: 36.5rem) {
+      .example .articles {
+        width: 100%; } }
+  .example aside {
+    float: left; }
+    @media (min-width: 64rem) {
+      .example aside {
+        margin: 0 0.625rem;
+        width: 18.75rem; } }
+    @media (min-width: 85rem) and (min-device-width: 85rem) {
+      .example aside {
+        margin: 0 0.9375rem;
+        width: 23.125rem; } }
+    @media (min-width: 15rem) and (max-width: 63.9375rem) {
+      .example aside {
+        padding: 0 10px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        -o-box-sizing: border-box; } }
+    @media (min-width: 37.5rem) and (max-width: 63.9375rem) {
+      .example aside {
+        width: 33.33%; } }
+    @media (min-width: 15rem) and (max-width: 36.5rem) {
+      .example aside {
+        width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
