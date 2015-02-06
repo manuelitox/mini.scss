@@ -8,11 +8,11 @@
 
 @function calc-col-fixed($col-qty, $type: "normal", $width: 0, $gutter: 0) {
 	@if $type == "normal" {
-		$width: map-get($grid, col-width);
-		$gutter: map-get($grid, gutter);
+		$width: map-fetch($config-grid, grid col-width);
+		$gutter: map-fetch($config-grid, grid gutter);
 	} @else if $type == "big" {
-		$width: map-get($grid, big-col-width);
-		$gutter: map-get($grid, big-gutter);
+		$width: map-fetch($config-grid, grid big-col-width);
+		$gutter: map-fetch($config-grid, grid big-gutter);
 	}
 
 	@return ($width * $col-qty) + ($gutter * $col-qty) - $gutter;

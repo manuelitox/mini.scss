@@ -5,25 +5,33 @@
 // grid's generator
 // 
 
+$col-qty: map-fetch($config-grid, grid col-qty);
+
 @include breakpoint(desktop) {
 
-    @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));    
-    @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+    $col-width: map-fetch($config-grid, grid col-width);
+    $gutter:  map-fetch($config-grid, grid gutter);
+
+    @include generate-container($col-qty, $gutter, $col-width);    
+    @include generate-col($col-qty, $gutter, $col-width);
     
     // optionals
-    //@include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
-    //@include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, gutter), map-fetch($grid, col-width));
+    //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
+    //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
 
 }
 
 @include breakpoint(big-desktop) {
 
-    @include generate-container(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
-    @include generate-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
+    $col-width: map-fetch($config-grid, grid big-col-width);
+    $gutter:  map-fetch($config-grid, grid big-gutter);
+
+    @include generate-container($col-qty, $gutter, $col-width);
+    @include generate-col($col-qty, $gutter, $col-width);
     
     // optionals
-    //@include generate-pre-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
-    //@include generate-suf-col(map-fetch($grid, col-qty), map-fetch($grid, big-gutter), map-fetch($grid, big-col-width));
+    //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
+    //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
 
 }
 
@@ -44,7 +52,7 @@
         }
     }   
 
-    @for $i from 2 through (map-fetch($grid, col-qty)) {
+    @for $i from 2 through (map-fetch($config-grid, grid col-qty)) {
         .col#{$i} { 
             float: left;
             margin: 0;

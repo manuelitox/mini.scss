@@ -12,12 +12,12 @@
 	float: left;
 
 	@include breakpoint(desktop) {
-		margin: 0 map-get($grid, gutter) / 2;
+		margin: 0 map-fetch($config-grid, grid gutter) / 2;
 		width: calc-col-fixed($col-qty, "normal");
 	}
 
 	@include breakpoint(big-desktop) {
-		margin: 0 map-get($grid, big-gutter) / 2;
+		margin: 0 map-fetch($config-grid, grid big-gutter) / 2;
 		width: calc-col-fixed($col-qty, "big");
 	}
 
@@ -45,6 +45,6 @@
 
 // by IE8
 @mixin col-ie($col-qty: 12) {
-	margin: 0 map-get($grid, gutter) / 2;
+	margin: 0 map-fetch($config-grid, grid gutter) / 2;
 	width: calc-col-fixed($col-qty, "normal");
 }

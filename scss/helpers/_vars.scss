@@ -2,13 +2,21 @@
 // Variables:
 // Use @function map-fetch($map, $keys)
 // for configuration variables.
-$breakpoints: (
-	big-desktop: 1360px,
-  	desktop: 1024px,
-  	responsive: 1023px,
-  	from-tablet-to-desktop: 600px,
-  	tablet: 600px,
-  	mobile: 240px
+
+$config-grid: (
+  big-desktop: 1360px,
+  desktop: 1024px,
+  responsive: 1023px,
+  from-tablet-to-desktop: 600px,
+  tablet: 600px,
+  mobile: 240px, 
+  grid: (
+		col-qty: 12,
+		col-width: 60px,
+		gutter: 20px,
+		big-col-width: 70px,
+		big-gutter: 30px	
+	)
 );
 
 $ratios: (
@@ -17,15 +25,7 @@ $ratios: (
 	retina-2k: 2,
 	medium-15k: 1.5,
 	medium-13k: 1.3,
-	low: 1
-);
-
-$grid: (
-	col-qty: 12,
-	col-width: 60px,
-	gutter: 20px,
-	big-col-width: 70px,
-	big-gutter: 30px
+	low: 1		
 );
 
 $paths: (

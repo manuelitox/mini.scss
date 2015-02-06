@@ -14,11 +14,11 @@
 	}
 
 	@include breakpoint(desktop) {
-		width: calc-container(map-get($grid, col-width), map-get($grid, col-qty), map-get($grid, gutter));
+		width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
 	}
 
 	@include breakpoint(big-desktop) {
-		width: calc-container(map-get($grid, big-col-width), map-get($grid, col-qty), map-get($grid, big-gutter));
+		width: calc-container(map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter));
 	}  
 
 	@include breakpoint(responsive) {
@@ -27,5 +27,5 @@
 }
 
 @mixin container-ie() {
-	width: calc-container(map-get($grid, col-width), map-get($grid, col-qty), map-get($grid, gutter));
+	width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
 }

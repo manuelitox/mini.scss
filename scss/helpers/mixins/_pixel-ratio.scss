@@ -1,20 +1,20 @@
 // Detect pixel ratio
-// @param $ratio (retina-5k | retina-3k | retina-2k | medium-15k | medium-13k | low); 
+// @param $value (retina-5k | retina-3k | retina-2k | medium-15k | medium-13k | low); 
 // 
 // use function round(line 15): Rounds a number to the nearest whole number. 
 // @include pixel-ratio(low);
 // 
 
-@mixin pixel-ratio($ratio) {
-	@if not map-has-key($ratios, $ratio) {
-		@warn 'Pixel ratio value (#{$ratio}) is unknown';
+@mixin pixel-ratio($value) {
+	@if not map-has-key($ratios, $value) {
+		@warn 'Pixel ratio value (#{$value}) is unknown';
 	} @else {
-	  	@media 
-	  		only screen and (-webkit-min-device-pixel-ratio: map-fetch($ratios, $ratio)),
-	  		only screen and (-o-min-device-pixel-ratio: #{map-fetch($ratios, $ratio)} / 1),
-	  		only screen and (min-resolution: #{round(map-fetch($ratios, $ratio)*96)}dpi),
-	  		only screen and (min-resolution: #{map-fetch($ratios, $ratio)}dppx) {
-	    		@content;
-	  		}
+	  @media 
+	  	only screen and (-webkit-min-device-pixel-ratio: map-fetch($ratios, $value)),
+	  	only screen and (-o-min-device-pixel-ratio: #{map-fetch($ratios, $value)} / 1),
+	  	only screen and (min-resolution: #{round(map-fetch($ratios, $value)*96)}dpi),
+	  	only screen and (min-resolution: #{map-fetch($ratios, $value)}dppx) {
+	    @content;
+	  }
 	}
 }
