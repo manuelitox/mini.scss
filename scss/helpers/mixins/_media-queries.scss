@@ -1,5 +1,5 @@
 // Generate Media Queries
-// @param $device (big-desktop | desktop | from-tablet-to-desktop | responsive | tablet | mobile);
+// @param $device (big-desktop | desktop | tablet-to-desktop | responsive | tablet | mobile);
 // 
 // @include breakpoint(desktop);
 // 
@@ -15,7 +15,7 @@
 		@media (min-width: map-fetch($config-grid, desktop)) { 
 			@content; 
 		}
-	} @else if $device == 'from-tablet-to-desktop' {
+	} @else if $device == 'tablet-to-desktop' {
 		@media (min-width: map-fetch($config-grid, tablet)) {
 			@content;
 		}
