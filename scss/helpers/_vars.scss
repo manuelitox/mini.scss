@@ -4,19 +4,19 @@
 // for configuration variables.
 
 $config-grid: (
-  big-desktop: 85rem,
-  desktop: 64rem,
-  responsive: 63.9375rem,
-  tablet-to-desktop: 37.5rem,
-  tablet: 37.5rem,
-  mobile: 15rem, 
+  big-desktop: 1360px,
+  desktop: 1024px,
+  responsive: 1023px,
+  tablet-to-desktop: 600px,
+  tablet: 600px,
+  mobile: 240px, 
   grid: (
 		col-qty: 12,
-		col-width: 3.75rem,
-		gutter: 1.25rem,
-		big-col-width: 4.375rem,
-		big-gutter: 1.875rem	
-	)
+		col-width: 60px,
+		gutter: 20px,
+		big-col-width: 70px,
+		big-gutter: 30px	
+	)	
 );
 
 $ratios: (
