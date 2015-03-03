@@ -11,25 +11,28 @@
 		big: 30px,
 		normal: 20px
 	);
-	
+
+	$row: calc-row(map-get($bases, normal), $amount);
+	$row-big: calc-row(map-get($bases, big), $amount);
+
 	@if $position == "full" {
-		padding: calc-row(map-get($bases, normal), $amount) 0;
+		padding: $row 0;
 		
 		@include breakpoint(big-desktop) {
-			padding: calc-row(map-get($bases, big), $amount) 0;
+			padding: $row-big 0;
 		}
 
 	} @else if $position == "bottom" {
-		padding: 0 0 calc-row(map-get($bases, normal), $amount); 
+		padding: 0 0 $row; 
 
 		@include breakpoint(big-desktop) {
-			padding: 0 0 calc-row(map-get($bases, big), $amount); 
+			padding: 0 0 $row-big; 
 		}
 	} @else if $position == "top" {
-		padding: calc-row(map-get($bases, normal), $amount) 0 0;
+		padding: $row 0 0;
 
 		@include breakpoint(big-desktop) {
-			padding: calc-row(map-get($bases, big), $amount) 0 0;	
+			padding: $row-big 0 0;	
 		}		
 	} @else {
 		@error "Position value (#{$position}) is unknown";
