@@ -1,10 +1,10 @@
 html {
 
-	@include breakpoint(desktop) {
+	@include breakpoint(large) {
 		font-size: 16px;
 	}
 
-	@include breakpoint(responsive) {
+	@include breakpoint(small-to-medium) {
 		font-size: 14px;
 	}
 }

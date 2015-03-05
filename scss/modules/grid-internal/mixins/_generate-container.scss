@@ -13,15 +13,15 @@
 	    display: block;
 	}
 
-	@include breakpoint(desktop) {
+	@include breakpoint(large) {
 		width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
 	}
 
-	@include breakpoint(big-desktop) {
+	@include breakpoint(xxx-large) {
 		width: calc-container(map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter));
 	}  
 
-	@include breakpoint(responsive) {
+	@include breakpoint(small-to-medium) {
 		width: 100%;
 	} 	
 }

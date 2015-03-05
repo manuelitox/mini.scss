@@ -15,22 +15,22 @@
 
 	@if $type == "pre" {
 	
-		@include breakpoint(desktop) {
+		@include breakpoint(large) {
 			margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
 		}
 
-		@include breakpoint(big-desktop) {
+		@include breakpoint(xxx-large) {
 			margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
 		}
 	
 	} @else if $type == "suf" {
 	
-		@include breakpoint(desktop) {
+		@include breakpoint(large) {
 			float: right;
 			margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
 		}
 
-		@include breakpoint(big-desktop) {
+		@include breakpoint(xxx-large) {
 			margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
 		}
 

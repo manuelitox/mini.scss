@@ -11,17 +11,17 @@
 @mixin col($col-qty: 12, $tablet-option: "full", $mobile-option: null) {
 	float: left;
 
-	@include breakpoint(desktop) {
+	@include breakpoint(large) {
 		margin: 0 map-fetch($config-grid, grid gutter) / 2;
 		width: calc-col-fixed($col-qty, "normal");
 	}
 
-	@include breakpoint(big-desktop) {
+	@include breakpoint(xxx-large) {
 		margin: 0 map-fetch($config-grid, grid big-gutter) / 2;
 		width: calc-col-fixed($col-qty, "big");
 	}
 
-	@include breakpoint(responsive) {
+	@include breakpoint(small-to-medium) {
 		padding: 0 10px;
 
 		@if not has-mobile-option($mobile-option) {
@@ -33,11 +33,11 @@
 
 	@if has-mobile-option($mobile-option) {
 
-		@include breakpoint(tablet) {
+		@include breakpoint(medium) {
 			width: calc-col-percentage($tablet-option);
 		}	
 
-		@include breakpoint(mobile) {
+		@include breakpoint(small) {
 			width: calc-col-percentage($mobile-option);
 		}
 	}
