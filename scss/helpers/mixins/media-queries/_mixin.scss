@@ -9,7 +9,7 @@
 		@error 'Device value (#{$device}) is unknown';
 	} 
 
-  @media #{map-get($breakpoints, $device)} {
-    @content;
-  }
+	@media #{map-get($breakpoints, $device)} {
+		@content;
+	}
 }
