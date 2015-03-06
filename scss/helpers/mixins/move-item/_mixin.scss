@@ -1,0 +1,31 @@
+// Move item
+// @param $type (static | absolute | fixed | relative | initial | inherit);
+// @param $values (bottom, left, right, top);
+//
+// @include position(inherit, 10px, 10px, 10px, 10px);
+//
+
+@mixin move-item($type: relative, $values...) {
+  
+  $args: static, absolute, fixed, relative, initial, inherit;
+
+  @if has-value($args, $type) == null {
+    @error 'Position value (#{$type}) is unknown';
+  }
+
+  position: $type;
+  
+  $sides: bottom, left, right, top;
+
+  @if length($values) == 0 {
+    @error 'Empty values';
+  }
+  
+  @for $i from 1 through length($values) {
+    @if length(nth($values, $i)) == 0 {
+      #{nth($sides, $i)}: 0;
+    } @else {
+      #{nth($sides, $i)}: nth($values, $i);
+    }
+  }  
+}
