@@ -51,12 +51,6 @@ a {
   a:hover {
     text-decoration: underline; }
 
-.txt-center {
-  text-align: center; }
-
-.txt-right {
-  text-align: right; }
-
 .example {
   margin: 0 auto; }
   .example:after {
