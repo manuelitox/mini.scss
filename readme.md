@@ -41,6 +41,8 @@ Por defecto, viene configurado para trabajar con un grid interno, no declarado e
 
 ### Cómo usar el Grid Interno:
 
+Soporte para Intenet Explorer >= 9.
+
 Muy fácil, supongamos que necesitamos crear la estructura básica de un Blog:
 
 <pre><code>.content-wrap {
@@ -74,7 +76,9 @@ Para terminar, el HTML nos quedaría de la siguiente manera:
 		// contenido de aside
 </code></pre>
 
-## Cómo usar el Grid basado en clases de ayuda:
+### Cómo usar el Grid basado en clases de ayuda:
+
+Soporte para Intenet Explorer >= 8.
 
 Primeramente, debemos activarlo. Abrimos el archivo <code>modules/base.scss</code> y descomentamos la línea número 10: <code>@import "grid-helper-classes/base";</code> 
 
