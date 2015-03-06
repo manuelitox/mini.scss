@@ -2,14 +2,14 @@
 // @param $args (elements list)
 // @param $type (type)
 //
-// has-value($list, $type)
+// has-value($list, $type) == null
 //
 
-@function has-value($args, $type, $value: '') {
-	@each $arg in $args {
-		@if $arg == $type {
-			$value: $type;
-		}
-	}
-	@return $value;
+@function has-value($args, $type) {
+  @for $i from 1 through length($args) {
+    @if nth($args, $i) == $type {
+      @return $type;
+    }
+  }
+  @return null;
 }
