@@ -35,6 +35,6 @@
 			padding: $row-big 0 0;	
 		}		
 	} @else {
-		@error "Position value (#{$position}) is unknown";
+		@error 'Position value (#{$position}) is unknown';
 	}
 }

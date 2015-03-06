@@ -8,7 +8,6 @@
 // 
 
 @mixin gutter($col: 12, $type: "pre") {
-
 	@if $col > map-fetch($config-grid, grid col-qty) {
 		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";
 	}
@@ -40,7 +39,6 @@
 }
 
 @mixin gutter-ie($col: 12, $type: "pre") {
-
 	@if $col > map-fetch($config-grid, grid col-qty) {
 		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";
 	}	
