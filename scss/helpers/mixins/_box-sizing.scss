@@ -10,9 +10,8 @@
 	$args: content-box, border-box, initial, inherit;
 
 	@if has-value($args, $type) == $type {
-		@include prefixer(box-sizing, $type);
+		box-sizing: $type;
 	} @else {
 		@warn 'Type value (#{$type}) is unknown';
 	}
-
 }

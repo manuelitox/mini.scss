@@ -5,5 +5,5 @@
 // 
 
 @mixin border-rounded($radius) {
-	@include prefixer(border-radius, $radius);
+	border-radius: $radius;
 }

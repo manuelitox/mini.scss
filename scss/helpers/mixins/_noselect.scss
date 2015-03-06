@@ -4,6 +4,5 @@
 //
 
 @mixin noselect {
-  	-webkit-touch-callout: none;
-  	@include prefixer(user-select, none, webkit ms);
+	user-select: none;
 }

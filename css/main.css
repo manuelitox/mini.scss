@@ -84,11 +84,7 @@ a {
     @media (min-width: 240px) and (max-width: 1023px) {
       .example .articles {
         padding: 0 10px;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box; } }
+        box-sizing: border-box; } }
     @media (min-width: 600px) and (max-width: 1023px) {
       .example .articles {
         width: 66.66%; } }
@@ -108,11 +104,7 @@ a {
     @media (min-width: 240px) and (max-width: 1023px) {
       .example aside {
         padding: 0 10px;
-        box-sizing: border-box;
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        -ms-box-sizing: border-box;
-        -o-box-sizing: border-box; } }
+        box-sizing: border-box; } }
     @media (min-width: 600px) and (max-width: 1023px) {
       .example aside {
         width: 33.33%; } }
