@@ -1,8 +1,0 @@
-// Disallow user selection
-//
-// @include noselect;
-//
-
-@mixin noselect {
-	user-select: none;
-}
