@@ -1,0 +1,21 @@
+// Detect pixel ratio
+// @param $value (hd-5x | hd-3x | hd-2x | md-15x | md-13x | md); 
+// 
+// use function round(line 15): Rounds a number to the nearest whole number. 
+// 
+// use:
+// @include pixel-ratio(md);
+// 
+
+@mixin pixel-ratio($value) {
+	@if not map-has-key($ratios, $value) {
+		@error 'Pixel ratio value (#{$value}) is unknown';
+	}
+
+	@media only screen and (-webkit-min-device-pixel-ratio: map-fetch($ratios, $value)),
+		only screen and (-o-min-device-pixel-ratio: map-fetch($ratios, $value) / 1),
+		only screen and (min-resolution: #{round(map-fetch($ratios, $value) * 96)}dpi),
+		only screen and (min-resolution: #{map-fetch($ratios, $value)}dppx) {
+			@content;
+	}
+}
