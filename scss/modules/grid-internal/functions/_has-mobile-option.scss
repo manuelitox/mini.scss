@@ -6,8 +6,10 @@
 
 @function has-mobile-option($mobile-option) {
 	$value: true;
+	
 	@if $mobile-option == null {
 		$value: false;
 	}
+	
 	@return $value;
 }

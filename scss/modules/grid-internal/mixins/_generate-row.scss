@@ -1,4 +1,4 @@
-// generate padding for containers.
+// generate container's padding
 //
 // @param $amount
 // @param $position (full | bottom | top)
@@ -6,11 +6,17 @@
 // @include row(1);
 // 
 
-@mixin row($amount: 1, $position: full) {
+@mixin row($position: full, $amount: 1) {
 	$bases: (
 		big: 30px,
 		normal: 20px
 	);
+
+	$positions: "full", "bottom", "top";
+
+	@if not has-value($positions, $position) {
+		@error 'Position value (#{$position}) is unknown.';
+	}
 
 	$row: calc-row(map-get($bases, normal), $amount);
 	$row-big: calc-row(map-get($bases, big), $amount);
@@ -34,7 +40,5 @@
 		@include breakpoint(xxx-large) {
 			padding: $row-big 0 0;	
 		}		
-	} @else {
-		@error 'Position value (#{$position}) is unknown';
 	}
 }

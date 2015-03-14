@@ -1,19 +1,21 @@
-// Calculate column width fixed
+// Calculate column fixed width
 //
 // @param $col-qty
 // @param $type (normal | big)
 //
-// calc-col-fixed($col-qty);
+// $result (width | gutter)
+//
+// calc-col-fixed($col-qty, 'normal');
 //
 
-@function calc-col-fixed($col-qty, $type: "normal", $width: 0, $gutter: 0) {
+@function calc-col-fixed($col-qty, $type: "normal") {
+  $result: 0;
+
 	@if $type == "normal" {
-		$width: map-fetch($config-grid, grid col-width);
-		$gutter: map-fetch($config-grid, grid gutter);
+		$result: map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter);
 	} @else if $type == "big" {
-		$width: map-fetch($config-grid, grid big-col-width);
-		$gutter: map-fetch($config-grid, grid big-gutter);
+		$result: map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter);
 	}
 
-	@return ($width * $col-qty) + ($gutter * $col-qty) - $gutter;
+	@return (nth($result, 1) * $col-qty) + (nth($result, 2) * $col-qty) - nth($result, 2);
 }

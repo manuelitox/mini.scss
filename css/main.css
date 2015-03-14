@@ -54,10 +54,6 @@ a {
 .example {
   margin: 0 auto;
   padding: 20px 0; }
-  .example:after {
-    clear: both;
-    content: '';
-    display: block; }
   @media (min-width: 1024px) {
     .example {
       width: 960px; } }
@@ -67,6 +63,10 @@ a {
   @media (min-width: 240px) and (max-width: 1023px) {
     .example {
       width: 100%; } }
+  .example:after {
+    clear: both;
+    content: '';
+    display: block; }
   @media (min-width: 1360px) {
     .example {
       padding: 30px 0; } }
