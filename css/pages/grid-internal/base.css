@@ -1,0 +1,406 @@
+body {
+  font-family: 'Roboto', serif, arial; }
+
+.container .container {
+  background-color: #f7f7f7; }
+
+.box {
+  background-color: #cccccc;
+  color: white;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center; }
+
+.note {
+  background-color: #c6538c;
+  border-radius: 2px;
+  color: white;
+  display: inline-block;
+  padding: 10px; }
+
+code {
+  background-color: #f7f7f7;
+  color: #333;
+  padding: 4px 8px; }
+
+.example-grid, .example-inner-grid, .example-sufpre-grid {
+  margin: 0 auto;
+  padding: 20px 0; }
+  @media (min-width: 1024px) {
+    .example-grid, .example-inner-grid, .example-sufpre-grid {
+      width: 960px; } }
+  @media (min-width: 1360px) {
+    .example-grid, .example-inner-grid, .example-sufpre-grid {
+      width: 1200px; } }
+  @media (min-width: 240px) and (max-width: 1023px) {
+    .example-grid, .example-inner-grid, .example-sufpre-grid {
+      width: 100%; } }
+  .example-grid:after, .example-inner-grid:after, .example-sufpre-grid:after {
+    clear: both;
+    content: '';
+    display: block; }
+  @media (min-width: 1360px) {
+    .example-grid, .example-inner-grid, .example-sufpre-grid {
+      padding: 30px 0; } }
+  .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+        margin: 0 10px;
+        width: 940px; } }
+    @media (min-width: 1360px) {
+      .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+        margin: 0 15px;
+        width: 1170px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid > header, .example-inner-grid > header, .example-sufpre-grid > header {
+        width: 100%; } }
+
+.example-grid {
+  margin: 0 auto;
+  padding: 20px 0; }
+  @media (min-width: 1024px) {
+    .example-grid {
+      width: 960px; } }
+  @media (min-width: 1360px) {
+    .example-grid {
+      width: 1200px; } }
+  @media (min-width: 240px) and (max-width: 1023px) {
+    .example-grid {
+      width: 100%; } }
+  .example-grid:after {
+    clear: both;
+    content: '';
+    display: block; }
+  @media (min-width: 1360px) {
+    .example-grid {
+      padding: 30px 0; } }
+  .example-grid > header {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid > header {
+        margin: 0 10px;
+        width: 940px; } }
+    @media (min-width: 1360px) {
+      .example-grid > header {
+        margin: 0 15px;
+        width: 1170px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid > header {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid > header {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid > header {
+        width: 100%; } }
+  .example-grid .content12 {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content12 {
+        margin: 0 10px;
+        width: 940px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content12 {
+        margin: 0 15px;
+        width: 1170px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content12 {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content12 {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content12 {
+        width: 100%; } }
+  .example-grid .content6.first, .example-grid .content6.two {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content6.first, .example-grid .content6.two {
+        margin: 0 10px;
+        width: 460px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content6.first, .example-grid .content6.two {
+        margin: 0 15px;
+        width: 570px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content6.first, .example-grid .content6.two {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content6.first, .example-grid .content6.two {
+        width: 33.33%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content6.first, .example-grid .content6.two {
+        width: 50%; } }
+  .example-grid .content6.three {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content6.three {
+        margin: 0 10px;
+        width: 460px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content6.three {
+        margin: 0 15px;
+        width: 570px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content6.three {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content6.three {
+        width: 33.33%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content6.three {
+        width: 100%; } }
+  .example-grid .content6.four {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content6.four {
+        margin: 0 10px;
+        width: 460px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content6.four {
+        margin: 0 15px;
+        width: 570px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content6.four {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content6.four {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content6.four {
+        width: 100%; } }
+  .example-grid .content6.five, .example-grid .content6.six {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content6.five, .example-grid .content6.six {
+        margin: 0 10px;
+        width: 460px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content6.five, .example-grid .content6.six {
+        margin: 0 15px;
+        width: 570px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content6.five, .example-grid .content6.six {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content6.five, .example-grid .content6.six {
+        width: 50%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content6.five, .example-grid .content6.six {
+        width: 50%; } }
+  .example-grid .content4.first {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content4.first {
+        margin: 0 10px;
+        width: 300px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content4.first {
+        margin: 0 15px;
+        width: 370px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content4.first {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content4.first {
+        width: 33.33%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content4.first {
+        width: 33.33%; } }
+  .example-grid .content4.two {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content4.two {
+        margin: 0 10px;
+        width: 300px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content4.two {
+        margin: 0 15px;
+        width: 370px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content4.two {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content4.two {
+        width: 66.66%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content4.two {
+        width: 66.66%; } }
+  .example-grid .content2.first, .example-grid .content2.two {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-grid .content2.first, .example-grid .content2.two {
+        margin: 0 10px;
+        width: 140px; } }
+    @media (min-width: 1360px) {
+      .example-grid .content2.first, .example-grid .content2.two {
+        margin: 0 15px;
+        width: 170px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-grid .content2.first, .example-grid .content2.two {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-grid .content2.first, .example-grid .content2.two {
+        width: 50%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-grid .content2.first, .example-grid .content2.two {
+        width: 50%; } }
+
+.example-inner-grid {
+  margin: 0 auto;
+  padding: 20px 0; }
+  @media (min-width: 1024px) {
+    .example-inner-grid {
+      width: 960px; } }
+  @media (min-width: 1360px) {
+    .example-inner-grid {
+      width: 1200px; } }
+  @media (min-width: 240px) and (max-width: 1023px) {
+    .example-inner-grid {
+      width: 100%; } }
+  .example-inner-grid:after {
+    clear: both;
+    content: '';
+    display: block; }
+  @media (min-width: 1360px) {
+    .example-inner-grid {
+      padding: 30px 0; } }
+  .example-inner-grid > header {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-inner-grid > header {
+        margin: 0 10px;
+        width: 940px; } }
+    @media (min-width: 1360px) {
+      .example-inner-grid > header {
+        margin: 0 15px;
+        width: 1170px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-inner-grid > header {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-inner-grid > header {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-inner-grid > header {
+        width: 100%; } }
+  .example-inner-grid .wrap {
+    margin: 0 auto;
+    width: 100%; }
+    .example-inner-grid .wrap:after {
+      clear: both;
+      content: '';
+      display: block; }
+  .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+        margin: 0 10px;
+        width: 460px; } }
+    @media (min-width: 1360px) {
+      .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+        margin: 0 15px;
+        width: 570px; } }
+    @media (min-width: 240px) and (max-width: 1023px) {
+      .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+        box-sizing: border-box;
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+        width: 100%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-inner-grid .content6.first, .example-inner-grid .content6.two {
+        width: 100%; } }
+  .example-inner-grid .inner-content3.first, .example-inner-grid .inner-content3.two, .example-inner-grid .inner-content3.three {
+    box-sizing: border-box;
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-inner-grid .inner-content3.first, .example-inner-grid .inner-content3.two, .example-inner-grid .inner-content3.three {
+        width: 33.33%; } }
+    @media (min-width: 600px) {
+      .example-inner-grid .inner-content3.first, .example-inner-grid .inner-content3.two, .example-inner-grid .inner-content3.three {
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-inner-grid .inner-content3.first, .example-inner-grid .inner-content3.two, .example-inner-grid .inner-content3.three {
+        width: 33.33%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-inner-grid .inner-content3.first, .example-inner-grid .inner-content3.two, .example-inner-grid .inner-content3.three {
+        width: 100%; } }
+  .example-inner-grid .inner-content3.four, .example-inner-grid .inner-content3.five {
+    box-sizing: border-box;
+    float: left; }
+    @media (min-width: 1024px) {
+      .example-inner-grid .inner-content3.four, .example-inner-grid .inner-content3.five {
+        width: 50%; } }
+    @media (min-width: 600px) {
+      .example-inner-grid .inner-content3.four, .example-inner-grid .inner-content3.five {
+        padding: 0 10px; } }
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .example-inner-grid .inner-content3.four, .example-inner-grid .inner-content3.five {
+        width: 50%; } }
+    @media (min-width: 240px) and (max-width: 599px) {
+      .example-inner-grid .inner-content3.four, .example-inner-grid .inner-content3.five {
+        width: 50%; } }
+
+.example-sufpre-grid .content8 {
+  float: left; }
+  @media (min-width: 1024px) {
+    .example-sufpre-grid .content8 {
+      margin: 0 10px;
+      width: 620px; } }
+  @media (min-width: 1360px) {
+    .example-sufpre-grid .content8 {
+      margin: 0 15px;
+      width: 770px; } }
+  @media (min-width: 240px) and (max-width: 1023px) {
+    .example-sufpre-grid .content8 {
+      box-sizing: border-box;
+      padding: 0 10px; } }
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .example-sufpre-grid .content8 {
+      width: 100%; } }
+  @media (min-width: 240px) and (max-width: 599px) {
+    .example-sufpre-grid .content8 {
+      width: 100%; } }
+  @media (min-width: 1024px) {
+    .example-sufpre-grid .content8.first, .example-sufpre-grid .content8.five {
+      margin-left: 330px; } }
+  @media (min-width: 1360px) {
+    .example-sufpre-grid .content8.first, .example-sufpre-grid .content8.five {
+      margin-left: 415px; } }
+  @media (min-width: 1024px) {
+    .example-sufpre-grid .content8.two, .example-sufpre-grid .content8.four {
+      float: right;
+      margin-right: 170px; } }
+  @media (min-width: 1360px) {
+    .example-sufpre-grid .content8.two, .example-sufpre-grid .content8.four {
+      margin-right: 215px; } }
+  @media (min-width: 1024px) {
+    .example-sufpre-grid .content8.three {
+      float: right;
+      margin-right: 330px; } }
+  @media (min-width: 1360px) {
+    .example-sufpre-grid .content8.three {
+      margin-right: 415px; } }
+
+/*# sourceMappingURL=base.css.map */

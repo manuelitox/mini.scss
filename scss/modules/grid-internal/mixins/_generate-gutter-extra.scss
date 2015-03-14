@@ -41,7 +41,7 @@
 // @param $col
 // @param $type (pre | suf)
 // 
-// @include gutter(12, "half", "full");
+// @include gutter(12, "pre");
 // 
 
 @mixin gutter($col: 12, $type: "pre") {

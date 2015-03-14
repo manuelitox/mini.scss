@@ -1,28 +1,3 @@
 .example {
-	@include container();
-	@include row();
-
-	article {
-		@include inner-container();
-
-		header {
-			@include inner-col("one-third", "full", "one-third");
-		}
-
-		p {
-			@include inner-col("one-third", "half");
-		}
-
-		a {
-			@include inner-col("one-third", "half");
-		}
-	}
-
-	.articles {
-		@include col(8, "two-thirds", "full");
-	}	
-	
-	.aside {
-		@include col(4, "one-third", "full");
-	}
+	// stuff
 }
