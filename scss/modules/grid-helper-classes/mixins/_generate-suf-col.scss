@@ -1,15 +1,21 @@
-// Suffix Column generate
-// @param $col-qty (column's amount);
-// @param $gutter (gutter);
-// @param $col-width (column width);
+// Generate suffix columns
 //
-// @include generate-suf-col(12, 20px, 60px);
+// @param $grid (col-qty, col-width, gutter, big-col-width, big-gutter);
+//
+// @include generate-suf-col($grid);
 //
 
-@mixin generate-suf-col($col-qty, $gutter, $col-width) {
-    @for $i from 2 through ($col-qty - 2) {
-        .suf#{$i} { 
-            margin-right: ($col-width * $i) + ($gutter * $i);
-        }
-    }
+@mixin generate-suf-col($grid) {
+	@for $i from 2 through ($col-qty - 2) {
+		.suf#{$i} { 
+			@include breakpoint(large) {
+				float: right;
+				margin-right: (map-get($grid, col-width) * $i) + (map-get($grid, gutter) * $i) + (map-get($grid, gutter) / 2);
+			}
+
+			@include breakpoint(xxx-large) {
+				margin-right: (map-get($grid, big-col-width) * $i) + (map-get($grid, big-gutter) * $i) + (map-get($grid, big-gutter) / 2);			
+			}	
+		}
+	}
 }

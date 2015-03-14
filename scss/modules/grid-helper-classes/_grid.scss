@@ -7,101 +7,16 @@
 
 $col-qty: map-fetch($config-grid, grid col-qty);
 
-@include breakpoint(large) {
-  $col-width: map-fetch($config-grid, grid col-width);
-  $gutter:  map-fetch($config-grid, grid gutter);
+@import "container";
 
-  @include generate-container($col-qty, $gutter, $col-width);    
-  @include generate-col($col-qty, $gutter, $col-width);
+@import "styles-default-col";
 
-  // optionals
-  //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
-  //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
-}
+// you can find the grid map in vars.scss
+$grid: map-fetch($config-grid, grid);
+@include generate-col($grid);
+// suffixes and prefixes for columns is disabled for default.
+// for enable it you only should uncomment the next two lines.
+// @include generate-pre-col($grid);
+// @include generate-suf-col($grid);
 
-@include breakpoint(xxx-large) {
-  $col-width: map-fetch($config-grid, grid big-col-width);
-  $gutter:  map-fetch($config-grid, grid big-gutter);
-
-  @include generate-container($col-qty, $gutter, $col-width);
-  @include generate-col($col-qty, $gutter, $col-width);
-    
-  // optionals
-  //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
-  //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
-}
-
-@include breakpoint(small-to-medium) {
-  .wrap {
-    overflow: hidden;
-    width: 100%;
-  }
-
-  .container {
-    width: 100%;
-
-    &:after {
-      content: " ";
-      clear: both;
-      display: block;
-    }
-  }   
-
-  @for $i from 2 through (map-fetch($config-grid, grid col-qty)) {
-    .col#{$i} { 
-      @include box-sizing(border-box);
-      float: left;
-      margin: 0;
-      padding: 0 10px;
-    }
-  }    
-}
-
-@include breakpoint(medium) {
-  .col12, .col11, .col10, .col9, .col8, .col7 {
-    width: 100%;
-  }
-
-  .col6, .col5, .col4, .col3 {
-    width: 50%;
-  }
-
-  .col2 {
-    width: 33.33%;
-  }
-
-  .half-tablet {
-    float: left;
-    width: 50%;
-  }
-
-  .one-third-tablet {
-    float: left;
-    width: 33.33%;
-  }
-
-  .two-thirds-tablet {
-    float: left;
-    width: 66.66%;
-  }
-}
-
-@include breakpoint(small) {
-  .col12, .col11, .col10, .col9, .col8, .col7, .col6, .col5, .col4, .col3 {
-    width: 100%;
-  }
-    
-  .col2 {
-    width: 50%;
-  }
-
-  .half-mobile {
-    width: 50%;
-  }
-}
-
-@include breakpoint(small-to-medium) {
-  .full {
-    width: 100%;
-  }
-}
+@import "utilities-responsive-grid";

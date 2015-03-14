@@ -1,0 +1,21 @@
+.container {
+  margin: 0 auto;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+
+  @include breakpoint(large) {
+    width: calc-container($col-qty, map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width)); 
+  }
+
+  @include breakpoint(xxx-large) {
+    width: calc-container($col-qty, map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
+  }
+
+  @include breakpoint(small-to-medium) {
+    width: 100%;
+  }
+}
