@@ -52,11 +52,8 @@ a {
     text-decoration: underline; }
 
 .example {
-  margin: 0 auto; }
-  .example:after {
-    clear: both;
-    content: '';
-    display: block; }
+  margin: 0 auto;
+  padding: 20px 0; }
   @media (min-width: 1024px) {
     .example {
       width: 960px; } }
@@ -66,11 +63,65 @@ a {
   @media (min-width: 240px) and (max-width: 1023px) {
     .example {
       width: 100%; } }
-  .example .wrap-example {
-    padding: 20px 0; }
-    @media (min-width: 1360px) {
-      .example .wrap-example {
-        padding: 30px 0; } }
+  .example:after {
+    clear: both;
+    content: '';
+    display: block; }
+  @media (min-width: 1360px) {
+    .example {
+      padding: 30px 0; } }
+  .example article {
+    margin: 0 auto;
+    width: 100%; }
+    .example article:after {
+      clear: both;
+      content: '';
+      display: block; }
+    .example article header {
+      box-sizing: border-box;
+      float: left; }
+      @media (min-width: 1024px) {
+        .example article header {
+          width: 33.33%; } }
+      @media (min-width: 600px) {
+        .example article header {
+          padding: 0 10px; } }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .example article header {
+          width: 100%; } }
+      @media (min-width: 240px) and (max-width: 599px) {
+        .example article header {
+          width: 33.33%; } }
+    .example article p {
+      box-sizing: border-box;
+      float: left; }
+      @media (min-width: 1024px) {
+        .example article p {
+          width: 33.33%; } }
+      @media (min-width: 600px) {
+        .example article p {
+          padding: 0 10px; } }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .example article p {
+          width: 50%; } }
+      @media (min-width: 240px) and (max-width: 599px) {
+        .example article p {
+          width: 50%; } }
+    .example article a {
+      box-sizing: border-box;
+      float: left; }
+      @media (min-width: 1024px) {
+        .example article a {
+          width: 33.33%; } }
+      @media (min-width: 600px) {
+        .example article a {
+          padding: 0 10px; } }
+      @media (min-width: 600px) and (max-width: 1023px) {
+        .example article a {
+          width: 50%; } }
+      @media (min-width: 240px) and (max-width: 599px) {
+        .example article a {
+          width: 50%; } }
   .example .articles {
     float: left; }
     @media (min-width: 1024px) {
@@ -83,33 +134,33 @@ a {
         width: 770px; } }
     @media (min-width: 240px) and (max-width: 1023px) {
       .example .articles {
-        padding: 0 10px;
-        box-sizing: border-box; } }
+        box-sizing: border-box;
+        padding: 0 10px; } }
     @media (min-width: 600px) and (max-width: 1023px) {
       .example .articles {
         width: 66.66%; } }
     @media (min-width: 240px) and (max-width: 599px) {
       .example .articles {
         width: 100%; } }
-  .example aside {
+  .example .aside {
     float: left; }
     @media (min-width: 1024px) {
-      .example aside {
+      .example .aside {
         margin: 0 10px;
         width: 300px; } }
     @media (min-width: 1360px) {
-      .example aside {
+      .example .aside {
         margin: 0 15px;
         width: 370px; } }
     @media (min-width: 240px) and (max-width: 1023px) {
-      .example aside {
-        padding: 0 10px;
-        box-sizing: border-box; } }
+      .example .aside {
+        box-sizing: border-box;
+        padding: 0 10px; } }
     @media (min-width: 600px) and (max-width: 1023px) {
-      .example aside {
+      .example .aside {
         width: 33.33%; } }
     @media (min-width: 240px) and (max-width: 599px) {
-      .example aside {
+      .example .aside {
         width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */

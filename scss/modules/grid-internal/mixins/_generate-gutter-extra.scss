@@ -1,3 +1,40 @@
+// generate margin-left
+// use calc-gutter-extra function
+//
+// @param $col
+// 
+// @include pre(12);
+// 
+
+@mixin pre($col) {
+	@include breakpoint(large) {
+		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
+	}
+
+	@include breakpoint(xxx-large) {
+		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
+	}
+}
+
+// generate margin-right
+// use calc-gutter-extra function
+//
+// @param $col
+// 
+// @include suf(12);
+// 
+
+@mixin suf($col) {
+	@include breakpoint(large) {
+		float: right;
+		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
+	}
+
+	@include breakpoint(xxx-large) {
+		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
+	}	
+}
+
 // generate gutter extra
 // use calc-gutter-extra function
 //
@@ -12,43 +49,15 @@
 		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";
 	}
 
-	@if $type == "pre" {
-	
-		@include breakpoint(large) {
-			margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
-		}
+	$types: "pre", "suf";
 
-		@include breakpoint(xxx-large) {
-			margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
-		}
-	
-	} @else if $type == "suf" {
-	
-		@include breakpoint(large) {
-			float: right;
-			margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
-		}
-
-		@include breakpoint(xxx-large) {
-			margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
-		}
-
-	} @else {
-		@error 'Type value (#{$type}) is unknown';
+	@if not has-value($types, $type) {
+		@error  'Type value (#{$type}) is unknown';
 	}
-}
-
-@mixin gutter-ie($col: 12, $type: "pre") {
-	@if $col > map-fetch($config-grid, grid col-qty) {
-		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";
-	}	
 
 	@if $type == "pre" {
-		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
+		@include pre($col);
 	} @else if $type == "suf" {
-		float: right;
-		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));		
-	} @else {
-		@error 'Type value (#{$type}) is unknown';
+		@include suf($col);
 	}
 }

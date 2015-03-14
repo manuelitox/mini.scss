@@ -8,27 +8,27 @@
 $col-qty: map-fetch($config-grid, grid col-qty);
 
 @include breakpoint(large) {
+  $col-width: map-fetch($config-grid, grid col-width);
+  $gutter:  map-fetch($config-grid, grid gutter);
+
   @include generate-container($col-qty, $gutter, $col-width);    
   @include generate-col($col-qty, $gutter, $col-width);
-    
+
   // optionals
   //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
   //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter), map-fetch($config-grid, grid col-width));
-
-  $col-width: map-fetch($config-grid, grid col-width);
-  $gutter:  map-fetch($config-grid, grid gutter);
 }
 
 @include breakpoint(xxx-large) {
+  $col-width: map-fetch($config-grid, grid big-col-width);
+  $gutter:  map-fetch($config-grid, grid big-gutter);
+
   @include generate-container($col-qty, $gutter, $col-width);
   @include generate-col($col-qty, $gutter, $col-width);
     
   // optionals
   //@include generate-pre-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
   //@include generate-suf-col(map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter), map-fetch($config-grid, grid big-col-width));
-
-  $col-width: map-fetch($config-grid, grid big-col-width);
-  $gutter:  map-fetch($config-grid, grid big-gutter);
 }
 
 @include breakpoint(small-to-medium) {

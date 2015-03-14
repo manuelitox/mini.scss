@@ -7,12 +7,6 @@
 @mixin container() {
 	margin: 0 auto;
 	  
-	&:after {
-	    clear: both;  
-	    content: '';
-	    display: block;
-	}
-
 	@include breakpoint(large) {
 		width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
 	}
@@ -24,8 +18,10 @@
 	@include breakpoint(small-to-medium) {
 		width: 100%;
 	} 	
-}
-
-@mixin container-ie() {
-	width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
+	
+	&:after {
+	    clear: both;  
+	    content: '';
+	    display: block;
+	}
 }
