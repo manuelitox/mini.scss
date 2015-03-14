@@ -13,9 +13,9 @@
 		one-third: 33.33%
 	);
 
-	@if map-has-key($options, $type) {
-		@return map-get($options, $type);
-	} @else {
+	@if not map-has-key($options, $type) {
 		@error 'Type value (#{$type}) is unknown';
 	}
+
+	@return map-get($options, $type);
 }
