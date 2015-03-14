@@ -22,13 +22,12 @@
 	}
 
 	@include breakpoint(small-to-medium) {
+		@include box-sizing();
 		padding: 0 10px;
 
 		@if not has-mobile-option($mobile-option) {
 			width: calc-col-percentage($tablet-option);			
 		}
-
-		@include box-sizing();
 	}
 
 	@if has-mobile-option($mobile-option) {
