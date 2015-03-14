@@ -37,18 +37,3 @@
 		@error 'Type value (#{$type}) is unknown';
 	}
 }
-
-@mixin gutter-ie($col: 12, $type: "pre") {
-	@if $col > map-fetch($config-grid, grid col-qty) {
-		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";
-	}	
-
-	@if $type == "pre" {
-		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
-	} @else if $type == "suf" {
-		float: right;
-		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));		
-	} @else {
-		@error 'Type value (#{$type}) is unknown';
-	}
-}

@@ -42,9 +42,3 @@
 		}
 	}
 }
-
-// by IE8
-@mixin col-ie($col-qty: 12) {
-	margin: 0 map-fetch($config-grid, grid gutter) / 2;
-	width: calc-col-fixed($col-qty, "normal");
-}

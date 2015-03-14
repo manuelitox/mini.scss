@@ -25,7 +25,3 @@
 		width: 100%;
 	} 	
 }
-
-@mixin container-ie() {
-	width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
-}
