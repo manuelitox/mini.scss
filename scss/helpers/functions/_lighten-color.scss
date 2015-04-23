@@ -1,0 +1,10 @@
+// A way easy for that colors are lighter
+// @param $color (color)
+// @param $percentage
+//
+// lighten-color(black, 20%)
+//
+
+@function lighten-color($color, $percentage) {
+	@return mix(white, $color, $percentage);
+}

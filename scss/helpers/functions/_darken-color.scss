@@ -1,0 +1,10 @@
+// A way easy for that colors are darken
+// @param $color (color)
+// @param $percentage
+//
+// lighten-color(white, 20%)
+//
+
+@function darken-color($color, $percentage) {
+	@return mix(black, $color, $percentage);	
+}
