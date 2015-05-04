@@ -5,16 +5,27 @@
 
 $config-grid: (
   grid: (
-		col-qty: 12,
-		col-width: 60px,
-		gutter: 20px,
-		big-col-width: 70px,
-		big-gutter: 30px	
+		col-qty       : 12,
+		col-width     : 60px,
+		gutter        : 20px,
+		big-col-width : 70px,
+		big-gutter    : 30px	
 	)	
 );
 
 $paths: (
-	img: "../img/",
-	sprite: "../img/sprite.png",
-	fonts: "../fonts/"
+	img    : "../img/",
+	sprite : "../img/sprite.png",
+	fonts  : "../fonts/"
+);
+
+$colors: (
+	black: #000,
+	white: #fff
+);
+
+$fonts: (
+	text      : arial,
+	titles    : arial,
+	subtitles : arial
 );
