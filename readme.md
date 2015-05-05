@@ -37,6 +37,14 @@ Ningún archivo del directorio **pages**, debe importarse a ie8.scss o main.scss
 
 En cada sub-directorio (por ejemplo: **Home**) Debe existir un archivo maestro (nombre-pagina.scss) para que Sass pueda generar un archivo único y luego, nosotros podamos llamarlo en el HTML en la página requerida.
 
+## Soporte a SassDOC:
+
+La documentación ya pueden encontrarla en <code>sassdoc/index.html</code>
+
+### TODO:
+
+* [ ] Documentación de Sistemas de grid.
+
 ## Sistemas de Grid:
 
 ¿Te gusta usar clases de ayuda en el HTML para crear tu estructura? o ¿Prefieres hacerlo internamente? Ambas opciones son posibles en Mini.scss
