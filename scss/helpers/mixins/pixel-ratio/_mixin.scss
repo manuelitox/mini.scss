@@ -1,11 +1,31 @@
-// Detect pixel ratio
-// @param $value (hd-5x | hd-3x | hd-2x | md-15x | md-13x | md); 
-// 
-// use function round(line 15): Rounds a number to the nearest whole number. 
-// 
-// use:
-// @include pixel-ratio(md);
-// 
+// ----------------------------------------------------------------------
+
+  // Pixel Ratio
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// Detect pixel ratio
+///
+/// @param $value hd-5x, hd-3x, hd-2x, md-15, md-13x, md.
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include pixel-ratio("hd-3x") {
+///			   // stuff...
+///      };
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+/// 	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
+///     body {
+///       // stuff... 
+///     } 
+///  	}
+///
 
 @mixin pixel-ratio($value) {
 	@if not map-has-key($ratios, $value) {

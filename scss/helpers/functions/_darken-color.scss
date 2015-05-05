@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-  // Sizes
+  // Darken Color
 
 // ----------------------------------------------------------------------
 
@@ -8,22 +8,20 @@
 /// @author Manuel Gonzalez
 ////
 
-/// width and height
-/// @param $width 
-/// @param $height [$width]
+/// A way easy for that colors are darken
+/// @param $color
+/// @param $percentage
 ///
 /// @example scss - Basic Usage Sass
 ///    body {
-///      @include sizes(10px);
+///      color: darken-color(white, 20%);
 ///    }
 ///
 /// @example scss - Basic Usage CSS Output
 ///    body {
-///      height: 10px;
-///      width: 10px;
+///      color: #cccccc; 
 ///    }
 
-@mixin sizes($width, $height:$width) {
-	height: $height;
-	width: $width;
+@function darken-color($color, $percentage) {
+	@return mix(black, $color, $percentage);	
 }

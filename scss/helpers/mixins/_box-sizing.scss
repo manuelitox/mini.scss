@@ -1,9 +1,26 @@
-// box sizing
-// @param $type (content-box | border-box | initial | inherit);
-//
-// use function has-value.
-// @include box-sizing(border-box);
-//
+// ----------------------------------------------------------------------
+
+  // Box sizing
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// The box-sizing property is used to alter the default CSS box model used to calculate widths and heights of elements. 
+/// @param $type [content-box] content-box, border-box, initial, inherit.
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include include box-sizing(border-box);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+/// 		 box-sizing: border-box;
+///    } 
+/// @require {function} has-value
 
 @mixin box-sizing($type: border-box) {
 

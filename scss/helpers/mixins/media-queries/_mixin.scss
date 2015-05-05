@@ -1,8 +1,30 @@
-// Generate Media Queries
-// @param $device (xxx-large | large | medium-to-large | small-to-medium | medium | small);
-// 
-// @include breakpoint(large);
-// 
+// ----------------------------------------------------------------------
+
+  // Media Queries
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// Generate breakpoints
+///
+/// @param $device xxx-large, large, medium-to-large, small-to-medium, medium, small.
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include breakpoint(large) {
+///			   // stuff...
+///      }
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    @media (min-width: 1024px) {
+///      body {
+///        // stuff... 
+///      } 
+///    }
 
 @mixin breakpoint($device) {
 	@if not map-has-key($breakpoints, $device) {

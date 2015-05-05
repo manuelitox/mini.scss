@@ -1,9 +1,28 @@
-// Opacity (Old IE disabled by default)
-// @param $opac ($opacity);
-// @param $ie (true);
-//
-// @include opacity(0.7, true);
-//
+// ----------------------------------------------------------------------
+
+  // Opacity
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+///
+/// @param $opac amount opacity
+/// @param $ie [true] true, false
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include include(0.7, true);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      filter: alpha(opacity=70);
+///      -ms-filter: alpha(opacity=70);
+///      opacity: 0.7; 
+///    }
 
 @mixin opacity($opac, $ie: true) {
   	@if $ie {

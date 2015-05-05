@@ -1,6 +1,6 @@
 // ----------------------------------------------------------------------
 
-  // Sizes
+  // Lighten Color
 
 // ----------------------------------------------------------------------
 
@@ -8,22 +8,20 @@
 /// @author Manuel Gonzalez
 ////
 
-/// width and height
-/// @param $width 
-/// @param $height [$width]
+/// A way easy for that colors are lighter
+/// @param $color
+/// @param $percentage
 ///
 /// @example scss - Basic Usage Sass
 ///    body {
-///      @include sizes(10px);
+///      color: lighten-color(black, 20%);
 ///    }
 ///
 /// @example scss - Basic Usage CSS Output
 ///    body {
-///      height: 10px;
-///      width: 10px;
+///      color: #333; 
 ///    }
 
-@mixin sizes($width, $height:$width) {
-	height: $height;
-	width: $width;
+@function lighten-color($color, $percentage) {
+	@return mix(white, $color, $percentage);
 }

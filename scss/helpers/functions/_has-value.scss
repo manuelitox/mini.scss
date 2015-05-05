@@ -1,9 +1,21 @@
-// An easy way to check if list has the value 
-// @param $args (elements list)
-// @param $type (type)
-//
-// has-value($list, $type) == null
-//
+// ----------------------------------------------------------------------
+
+  // Has value
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy to check if list has the value
+/// @param $args element list
+/// @param $type element type
+///
+/// @example scss - Basic Usage Sass
+///   @if has-value($args, $type) == null { 
+/// 	  // stuff...
+///		}
 
 @function has-value($args, $type) {
   @for $i from 1 through length($args) {
