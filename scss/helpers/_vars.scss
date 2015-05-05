@@ -3,15 +3,17 @@
 // Use @function map-fetch($map, $keys)
 // for configuration variables.
 
-$config-grid: (
-  grid: (
-		col-qty       : 12,
-		col-width     : 60px,
-		gutter        : 20px,
-		big-col-width : 70px,
-		big-gutter    : 30px	
-	)	
-) !default;
+// if want edit the grid config.
+//
+// $config-grid: (
+//   grid: (
+// 		col-qty       : 12,
+// 		col-width     : 60px,
+// 		gutter        : 20px,
+// 		big-col-width : 70px,
+// 		big-gutter    : 30px	
+// 	)	
+// );
 
 $paths: (
 	img    : "../img/",
