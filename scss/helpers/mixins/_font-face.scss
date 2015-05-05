@@ -1,8 +1,32 @@
-// font face
-// @param $name ($name);
-//
-// @include font-face(name);
-//
+// ----------------------------------------------------------------------
+
+  // Font Face
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// generate font face
+///
+/// @param $name typography name
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include font-face("typography-name");
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    @font-face {
+///      body {
+///        font-family: "typography-name";
+///        src: url("../fonts/typography-name.eot");
+///        src: url("../fonts/typography-name.eot?#iefix") format("embedded-opentype"), url("../fonts/typography-name.woff2") format("woff2"), url("../fonts/typography-name.woff") format("woff"), url("../fonts/typography-name.ttf") format("truetype"), url("../fonts/typography-name.svg#typography-name") format("svg");
+///        font-style: normal;
+///        font-weight: normal; 
+///      } 
+///    }
 
 @mixin font-face($name) {
 	@font-face {

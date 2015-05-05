@@ -1,9 +1,26 @@
-// A way easy for that colors are darken
-// @param $color (color)
-// @param $percentage
-//
-// lighten-color(white, 20%)
-//
+// ----------------------------------------------------------------------
+
+  // Darken Color
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy for that colors are darken
+/// @param $color
+/// @param $percentage
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      color: darken-color(white, 20%);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      color: #cccccc; 
+///    }
 
 @function darken-color($color, $percentage) {
 	@return mix(black, $color, $percentage);	

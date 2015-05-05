@@ -1,9 +1,26 @@
-// A way easy for that colors are lighter
-// @param $color (color)
-// @param $percentage
-//
-// lighten-color(black, 20%)
-//
+// ----------------------------------------------------------------------
+
+  // Lighten Color
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy for that colors are lighter
+/// @param $color
+/// @param $percentage
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      color: lighten-color(black, 20%);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      color: #333; 
+///    }
 
 @function lighten-color($color, $percentage) {
 	@return mix(white, $color, $percentage);

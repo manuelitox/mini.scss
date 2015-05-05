@@ -1,13 +1,27 @@
-// Sizes: width and height
-// @param $value ($width);
-// @param $value ($height);
-//
-// same values
-// @include sizes(2px);
-//
-// different values
-// @include sizes(2px, 4px);
-//
+// ----------------------------------------------------------------------
+
+  // Sizes
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// width and height
+/// @param $width 
+/// @param $height [$width]
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include sizes(10px);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      height: 10px;
+///      width: 10px;
+///    }
 
 @mixin sizes($width, $height:$width) {
 	height: $height;

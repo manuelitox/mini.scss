@@ -1,8 +1,27 @@
-// Placeholder text color
-// @param $color ($color);
-//
-// @include placeholder(#999);
-//
+// ----------------------------------------------------------------------
+
+  // Placeholder
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// Placeholder text color
+/// @param $color 
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      @include placeholder() {
+///			   color :red;
+/// 		 }
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body::placeholder {
+///      color: red; 
+/// 	 }
 
 @mixin placeholder() {
 	&::placeholder {
