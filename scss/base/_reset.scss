@@ -1,11 +1,11 @@
 html {
 
 	@include breakpoint(large) {
-		font-size: 16px;
+		font-size: map-fetch($fonts, sizes normal);
 	}
 
 	@include breakpoint(small-to-medium) {
-		font-size: 14px;
+		font-size: map-fetch($fonts, sizes small);
 	}
 }
 
@@ -56,7 +56,7 @@ figure {
 figcaption {
 	display: block;
 	text-align: center;
-	font-size: 14px;
+	font-size: map-fetch($fonts, sizes small);
 }
 
 a {
