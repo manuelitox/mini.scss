@@ -22,7 +22,7 @@
 	}
 
 	@include breakpoint(small-to-medium) {
-		@include box-sizing();
+		box-sizing: border-box;
 		padding: 0 10px;
 	}
 

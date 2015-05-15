@@ -9,7 +9,7 @@
 // 
 
 @mixin inner-col($option-large: "full", $option-medium: $option-large, $option-small: $option-medium) {
-	@include box-sizing();
+	box-sizing: border-box;
 	float: left;
 
 	@include breakpoint(large) {

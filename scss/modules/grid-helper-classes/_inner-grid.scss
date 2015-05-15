@@ -9,7 +9,7 @@
 }
 
 %inner-col {
-  @include box-sizing();
+  box-sizing: border-box;
   float: left;
 }
 
