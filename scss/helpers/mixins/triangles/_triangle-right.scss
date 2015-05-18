@@ -1,0 +1,20 @@
+// ----------------------------------------------------------------------
+
+  // Triangle Right
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// generator of triangles with right position
+/// @param $size [20px]
+/// @param $color [#333]
+///
+
+@mixin triangle-right($size, $color) {
+	border-top: $size solid transparent;
+	border-bottom: $size solid transparent;	
+	border-left: $size solid $color;	
+}
