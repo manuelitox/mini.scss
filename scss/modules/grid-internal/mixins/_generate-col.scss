@@ -11,26 +11,26 @@
 @mixin col($col-qty: 12, $option-medium: "full", $option-small: $option-medium) {
 	float: left;
 
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		margin: 0 map-fetch($config-grid, grid gutter) / 2;
 		width: calc-col-fixed($col-qty, "normal");
 	}
 
-	@include breakpoint(xxx-large) {
+	@include breakpoint('xlarge') {
 		margin: 0 map-fetch($config-grid, grid big-gutter) / 2;
 		width: calc-col-fixed($col-qty, "big");
 	}
 
-	@include breakpoint(small-to-medium) {
+	@include breakpoint('>=small<=medium') {
 		box-sizing: border-box;
 		padding: 0 10px;
 	}
 
-	@include breakpoint(medium) {
+	@include breakpoint('medium') {
 		width: calc-col-percentage($option-medium);
 	}	
 
-	@include breakpoint(small) {
+	@include breakpoint('small') {
 		width: calc-col-percentage($option-small);
 	}
 }

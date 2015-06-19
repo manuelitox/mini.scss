@@ -1,10 +1,10 @@
 html {
 
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		font-size: map-fetch($fonts, sizes normal);
 	}
 
-	@include breakpoint(small-to-medium) {
+	@include breakpoint('>=small<=medium') {
 		font-size: map-fetch($fonts, sizes small);
 	}
 }
