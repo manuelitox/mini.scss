@@ -9,7 +9,7 @@
 }
 
 %inner-col {
-  @include box-sizing();
+  box-sizing: border-box;
   float: left;
 }
 
@@ -20,36 +20,36 @@ $inner-cols: 'full', 'half', 'one-third', 'two-thirds';
   .inner-col-#{$inner-col} {
     @extend %inner-col;
 
-    @include breakpoint(medium-to-large) {
+    @include breakpoint('>=medium') {
       padding: 0 10px;
     }
 
-    @include breakpoint(small) {
+    @include breakpoint('small') {
       width: 100%;
     }
   }
 }
 
 .inner-col-full {
-  @include breakpoint(medium-to-large) {
+  @include breakpoint('>=medium') {
     width: 100%;
   }
 }
 
 .inner-col-half {
-  @include breakpoint(medium-to-large) {
+  @include breakpoint('>=medium') {
     width: 50%;
   }
 }
 
 .inner-col-one-third {
-  @include breakpoint(medium-to-large) {
+  @include breakpoint('>=medium') {
     width: 33.33%;
   }
 }
 
 .inner-col-two-thirds {
-  @include breakpoint(medium-to-large) {
+  @include breakpoint('>=medium') {
     width: 66.66%;
   }
 }

@@ -1,10 +1,10 @@
 html {
 
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		font-size: map-fetch($fonts, sizes normal);
 	}
 
-	@include breakpoint(small-to-medium) {
+	@include breakpoint('>=small<=medium') {
 		font-size: map-fetch($fonts, sizes small);
 	}
 }
@@ -24,18 +24,24 @@ h1 {
 h2 {
 	font-size: 1.6rem;
 	font-weight: normal;
-	margin: 0 0 20px 0;
+	margin: 0 0 20px;
 }
 
 h3 {
 	font-size: 1.4rem;
+	font-weight: normal;
 	margin: 0 0 10px;
 }
 
 h4 {
 	font-size: 0.9rem;
 	font-weight: normal;
-	margin: 0 0 10px 0;
+	margin: 0 0 10px;
+}
+
+h5 {
+	font-size: 0.7rem;
+	font-weight: normal;
 }
 
 p {

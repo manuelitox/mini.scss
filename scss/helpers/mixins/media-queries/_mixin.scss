@@ -10,11 +10,11 @@
 
 /// Generate breakpoints
 ///
-/// @param $device xxx-large, large, medium-to-large, small-to-medium, medium, small.
+/// @param $device xlarge, large, >=medium, >=small<=medium, medium, small.
 ///
 /// @example scss - Basic Usage Sass
 ///    body {
-///      @include breakpoint(large) {
+///      @include breakpoint('large') {
 ///			   // stuff...
 ///      }
 ///    }

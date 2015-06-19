@@ -8,12 +8,12 @@
 @mixin generate-suf-col($grid) {
 	@for $i from 2 through ($col-qty - 2) {
 		.suf#{$i} { 
-			@include breakpoint(large) {
+			@include breakpoint('large') {
 				float: right;
 				margin-right: (map-get($grid, col-width) * $i) + (map-get($grid, gutter) * $i) + (map-get($grid, gutter) / 2);
 			}
 
-			@include breakpoint(xxx-large) {
+			@include breakpoint('xlarge') {
 				margin-right: (map-get($grid, big-col-width) * $i) + (map-get($grid, big-gutter) * $i) + (map-get($grid, big-gutter) / 2);			
 			}	
 		}

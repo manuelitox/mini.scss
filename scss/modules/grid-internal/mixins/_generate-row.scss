@@ -24,20 +24,20 @@
 	@if $position == "full" {
 		padding: $row 0;
 		
-		@include breakpoint(xxx-large) {
+		@include breakpoint('xlarge') {
 			padding: $row-big 0;
 		}
 
 	} @else if $position == "bottom" {
 		padding: 0 0 $row; 
 
-		@include breakpoint(xxx-large) {
+		@include breakpoint('xlarge') {
 			padding: 0 0 $row-big; 
 		}
 	} @else if $position == "top" {
 		padding: $row 0 0;
 
-		@include breakpoint(xxx-large) {
+		@include breakpoint('xlarge') {
 			padding: $row-big 0 0;	
 		}		
 	}

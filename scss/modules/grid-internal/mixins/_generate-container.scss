@@ -7,15 +7,15 @@
 @mixin container() {
 	margin: 0 auto;
 	  
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		width: calc-container(map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid gutter));
 	}
 
-	@include breakpoint(xxx-large) {
+	@include breakpoint('xlarge') {
 		width: calc-container(map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid col-qty), map-fetch($config-grid, grid big-gutter));
 	}  
 
-	@include breakpoint(small-to-medium) {
+	@include breakpoint('>=small<=medium') {
 		width: 100%;
 	} 	
 	

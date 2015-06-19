@@ -1,0 +1,52 @@
+// ----------------------------------------------------------------------
+
+  // Triangle
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// triangles generator
+/// @param $type [up] up, bottom, left, right
+/// @param $size [20px]
+/// @param $color [#333]
+///
+/// @example scss - Basic Usage Sass
+///    .triangle-up {
+///      @include @include triangle('up', 40px, #333);
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    .triangle-up {
+///   	 border-left: 40px solid transparent;
+///   	 border-right: 40px solid transparent;
+///   	 border-bottom: 40px solid #333; 
+///   	 height: 0;
+///   	 width: 0;
+///    }
+
+@mixin triangle($type: 'up', $size: 20px, $color: #333) {
+	@include sizes(0);
+
+  @if has-value($cf-triangles-args, $type) == null {
+    @error 'Type value (#{$type}) is unknown';
+  }
+
+	@if $type == 'up' {
+		@include triangle-up($size, $color);	
+	}
+
+	@if $type == 'bottom' {
+		@include triangle-bottom($size, $color);		
+	}
+
+	@if $type == 'left' {
+		@include triangle-left($size, $color);		
+	}
+
+	@if $type == 'right' {
+		@include triangle-right($size, $color);		
+	}
+}

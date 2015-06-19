@@ -7,11 +7,11 @@
 // 
 
 @mixin pre($col) {
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
 	}
 
-	@include breakpoint(xxx-large) {
+	@include breakpoint('xlarge') {
 		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
 	}
 }
@@ -25,12 +25,12 @@
 // 
 
 @mixin suf($col) {
-	@include breakpoint(large) {
+	@include breakpoint('large') {
 		float: right;
 		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
 	}
 
-	@include breakpoint(xxx-large) {
+	@include breakpoint('xlarge') {
 		margin-right: calc-gutter-extra($col, map-fetch($config-grid, grid big-col-width), map-fetch($config-grid, grid big-gutter));
 	}	
 }
