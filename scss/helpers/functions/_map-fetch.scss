@@ -21,10 +21,9 @@
 ///    body {
 ///      color: #333; 
 ///    }
-
 @function map-fetch($map, $keys) {
-  	@each $key in $keys {
-    	$map: map-get($map, $key);
-  	}
-  	@return $map;
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+	@return $map;
 }

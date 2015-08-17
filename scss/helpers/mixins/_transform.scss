@@ -20,7 +20,6 @@
 ///    body {
 ///      transform: scale(1.24);
 ///    }
-
 @mixin scale($scale) {
 	transform: scale(#{$scale});
 }
@@ -43,7 +42,6 @@
 ///    body {
 ///      transform: rotate(20deg);
 ///    }
-
 @mixin rotate($deg) {
 	transform: rotate(#{$deg});
 }

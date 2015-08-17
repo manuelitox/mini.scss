@@ -25,7 +25,6 @@
 ///        // stuff... 
 ///      } 
 ///    }
-
 @mixin breakpoint($device) {
 	@if not map-has-key($breakpoints, $device) {
 		@error 'Device value (#{$device}) is unknown';

@@ -26,26 +26,22 @@
 ///   	 height: 0;
 ///   	 width: 0;
 ///    }
-
 @mixin triangle($type: 'up', $size: 20px, $color: #333) {
 	@include sizes(0);
 
-  @if has-value($cf-triangles-args, $type) == null {
-    @error 'Type value (#{$type}) is unknown';
-  }
+	@if has-value($cf-triangles-args, $type) == null {
+		@error 'Type value (#{$type}) is unknown';
+	}
 
 	@if $type == 'up' {
 		@include triangle-up($size, $color);	
 	}
-
 	@if $type == 'bottom' {
 		@include triangle-bottom($size, $color);		
 	}
-
 	@if $type == 'left' {
 		@include triangle-left($size, $color);		
 	}
-
 	@if $type == 'right' {
 		@include triangle-right($size, $color);		
 	}

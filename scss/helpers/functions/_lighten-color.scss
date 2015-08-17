@@ -21,7 +21,6 @@
 ///    body {
 ///      color: #333; 
 ///    }
-
 @function lighten-color($color, $percentage) {
 	@return mix(white, $color, $percentage);
 }

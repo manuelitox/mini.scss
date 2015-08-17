@@ -26,7 +26,6 @@
 ///     } 
 ///  	}
 ///
-
 @mixin pixel-ratio($value) {
 	@if not map-has-key($ratios, $value) {
 		@error 'Pixel ratio value (#{$value}) is unknown';

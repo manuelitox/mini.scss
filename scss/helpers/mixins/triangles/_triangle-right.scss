@@ -12,7 +12,6 @@
 /// @param $size [20px]
 /// @param $color [#333]
 ///
-
 @mixin triangle-right($size, $color) {
 	border-top: $size solid transparent;
 	border-bottom: $size solid transparent;	
