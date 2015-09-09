@@ -3,53 +3,52 @@
 // use @media queries
 // inner grid's generator
 // 
-
 .container .container {
-  width: 100%;
+    width: 100%;
 }
 
 %inner-col {
-  box-sizing: border-box;
-  float: left;
+    box-sizing: border-box;
+    float: left;
 }
 
 // values list of inner grid (classes).
-$inner-cols: 'full', 'half', 'one-third', 'two-thirds';
+$inner-cols: 'full', 'half', 'one-third', 'two-thirds' !default;
 
 @each $inner-col in $inner-cols {
-  .inner-col-#{$inner-col} {
-    @extend %inner-col;
+    .inner-col-#{$inner-col} {
+        @extend %inner-col;
 
-    @include breakpoint('>=medium') {
-      padding: 0 10px;
-    }
+        @include breakpoint('>=medium') {
+            padding: 0 10px;
+        }
 
-    @include breakpoint('small') {
-      width: 100%;
+        @include breakpoint('small') {
+            width: 100%;
+        }
     }
-  }
 }
 
 .inner-col-full {
-  @include breakpoint('>=medium') {
-    width: 100%;
-  }
+    @include breakpoint('>=medium') {
+        width: 100%;
+    }
 }
 
 .inner-col-half {
-  @include breakpoint('>=medium') {
-    width: 50%;
-  }
+    @include breakpoint('>=medium') {
+        width: 50%;
+    }
 }
 
 .inner-col-one-third {
-  @include breakpoint('>=medium') {
-    width: 33.33%;
-  }
+    @include breakpoint('>=medium') {
+        width: 33.33%;
+    }
 }
 
 .inner-col-two-thirds {
-  @include breakpoint('>=medium') {
-    width: 66.66%;
-  }
+    @include breakpoint('>=medium') {
+        width: 66.66%;
+    }
 }

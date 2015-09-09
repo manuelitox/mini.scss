@@ -5,7 +5,6 @@
 //
 // @include row(1);
 // 
-
 @mixin row($position: full, $amount: 1) {
 	$bases: (
 		big: 30px,

@@ -5,7 +5,6 @@
 //
 // @include generate-container(12, 20px, 60px);
 //
-
 @mixin generate-container($col-qty, $gutter, $col-width) {
     $wrap: ($col-width * $col-qty) + $gutter * ($col-qty - 1);
 

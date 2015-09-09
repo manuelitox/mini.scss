@@ -5,7 +5,6 @@
 //
 // calc-row($base, $amount);
 //
-
 @function calc-row($base, $amount) {
 	@return $base * $amount;
 }

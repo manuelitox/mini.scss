@@ -22,7 +22,6 @@
 ///    body::placeholder {
 ///      color: red; 
 /// 	 }
-
 @mixin placeholder() {
 	&::placeholder {
 		@content;

@@ -4,7 +4,6 @@
 //
 // calc-gutter($gutter);
 //
-
 @function calc-gutter($gutter) {
   	@return ($gutter / 2);
 }

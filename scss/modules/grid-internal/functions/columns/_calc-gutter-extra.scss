@@ -6,7 +6,6 @@
 //
 // calc-gutter-extra($col-qty, $col-width, $gutter);
 //
-
 @function calc-gutter-extra($col-qty, $col-width, $gutter) {
 	@return ($col-width * $col-qty) + ($gutter * $col-qty) + ($gutter / 2);
 }

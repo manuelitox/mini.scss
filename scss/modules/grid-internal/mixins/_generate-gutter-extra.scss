@@ -5,7 +5,6 @@
 // 
 // @include pre(12);
 // 
-
 @mixin pre($col) {
 	@include breakpoint('large') {
 		margin-left: calc-gutter-extra($col, map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter));
@@ -23,7 +22,6 @@
 // 
 // @include suf(12);
 // 
-
 @mixin suf($col) {
 	@include breakpoint('large') {
 		float: right;
@@ -43,7 +41,6 @@
 // 
 // @include gutter(12, "pre");
 // 
-
 @mixin gutter($col: 12, $type: "pre") {
 	@if $col > map-fetch($config-grid, grid col-qty) {
 		@error "column number (#{$col}) cannot be higher that the number maximun configured (at present is #{map-fetch($config-grid, grid col-qty)})";

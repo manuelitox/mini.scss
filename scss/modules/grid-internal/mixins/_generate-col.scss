@@ -7,7 +7,6 @@
 // 
 // @include col(12, "half", "full");
 // 
-
 @mixin col($col-qty: 12, $option-medium: "full", $option-small: $option-medium) {
 	float: left;
 

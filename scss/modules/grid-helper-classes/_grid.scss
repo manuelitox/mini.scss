@@ -4,13 +4,9 @@
 // use @media queries
 // grid's generator
 // 
-
 $col-qty: map-fetch($config-grid, grid col-qty);
-
 @import "container";
-
 @import "styles-default-col";
-
 // you can find the grid map in vars.scss
 $grid: map-fetch($config-grid, grid);
 @include generate-col($grid);
@@ -18,5 +14,4 @@ $grid: map-fetch($config-grid, grid);
 // for enable it you only should uncomment the next two lines.
 // @include generate-pre-col($grid);
 // @include generate-suf-col($grid);
-
 @import "utilities-responsive-grid";
