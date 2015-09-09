@@ -1,27 +1,27 @@
 .full {
 
-  @include breakpoint('>=small<=medium') {
-    width: 100%;
-  }
+    @include breakpoint('>=small<=medium') {
+        width: 100%;
+    }
 }
 
 .half {
 
-  @include breakpoint('>=small<=medium') {
-    width: 50%;
-  }
+    @include breakpoint('>=small<=medium') {
+        width: 50%;
+    }
 }
 
 .one-third {
   
-  @include breakpoint('medium') {
-    width: 33.33%;    
-  }
+    @include breakpoint('medium') {
+        width: 33.33%;    
+    }
 }
 
 .two-thirds {
 
-  @include breakpoint('medium') {
-    width: 66.66%;
-  }
+    @include breakpoint('medium') {
+        width: 66.66%;
+    }
 }
