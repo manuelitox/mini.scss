@@ -4,7 +4,6 @@
 //
 // @include generate-col($grid);
 //
-
 @mixin generate-col($grid) {
 	@for $i from 2 through $col-qty {
 		.col#{$i} {

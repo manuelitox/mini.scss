@@ -4,7 +4,6 @@
 //
 // @include generate-pre-col($grid);
 //
-
 @mixin generate-pre-col($grid) {
 	@for $i from 2 through ($col-qty - 2) {
 		.pre#{$i} { 

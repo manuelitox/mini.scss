@@ -7,7 +7,6 @@
 // 
 // @include inner-col("half", "full");
 // 
-
 @mixin inner-col($option-large: "full", $option-medium: $option-large, $option-small: $option-medium) {
 	box-sizing: border-box;
 	float: left;

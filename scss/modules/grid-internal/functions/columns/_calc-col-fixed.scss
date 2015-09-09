@@ -7,10 +7,8 @@
 //
 // calc-col-fixed($col-qty, 'normal');
 //
-
 @function calc-col-fixed($col-qty, $type: "normal") {
   	$result: 0;
-
 	@if $type == "normal" {
 		$result: map-fetch($config-grid, grid col-width), map-fetch($config-grid, grid gutter);
 	} @else if $type == "big" {
