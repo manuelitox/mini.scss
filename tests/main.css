@@ -1,0 +1,71 @@
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  html {
+    font-size: 14px; } }
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0; }
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0 0 20px; }
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0 0 10px; }
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0 0 10px; }
+
+h5 {
+  font-size: 0.7rem;
+  font-weight: normal; }
+
+p {
+  margin: 0 0 20px 0; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+figure {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center; }
+
+figcaption {
+  display: block;
+  text-align: center;
+  font-size: 14px; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+/* # Utilities ---------- */
+/* Darken Color [function] */
+[data-module="Utilities"] [data-test="Darken Color [function]"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the gray color"; }
+
+/* # SUMMARY ---------- */
+/* 1 Tests: */
+/*  - 1 Passed */
+/*  - 0 Failed */
+/* -------------------- */
+
+/*# sourceMappingURL=main.css.map */

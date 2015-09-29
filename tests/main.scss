@@ -1,0 +1,15 @@
+@import "../node_modules/sass-true/sass/true";
+@import "../scss/main";
+
+@include test-module('Utilities') {
+
+  // Testing Functions
+  @include test('Darken Color [function]') {
+	$base   : darken-color(white, 20%);
+	$expect : #ccc;
+    @include assert-equal($base, $expect,
+      'Returns the gray color');
+  }
+}
+
+@include report;
