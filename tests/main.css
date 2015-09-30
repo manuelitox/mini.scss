@@ -56,15 +56,20 @@ a {
   a:hover {
     text-decoration: underline; }
 
-/* # Utilities ---------- */
-/* Darken Color [function] */
-[data-module="Utilities"] [data-test="Darken Color [function]"] .assert-equal {
+/* # Darken color [function] ---------- */
+/* Should return gray color and be true. */
+[data-module="Darken color [function]"] [data-test="Should return gray color and be true."] .assert-equal {
   -result: PASS;
   -description: "Returns the gray color"; }
 
+/* Should return a gray color but not equal to expected it */
+[data-module="Darken color [function]"] [data-test="Should return a gray color but not equal to expected it"] .assert-unequal {
+  -result: PASS;
+  -description: "Returns a gray color #e6e6e6 that is different to #ccc"; }
+
 /* # SUMMARY ---------- */
-/* 1 Tests: */
-/*  - 1 Passed */
+/* 2 Tests: */
+/*  - 2 Passed */
 /*  - 0 Failed */
 /* -------------------- */
 
