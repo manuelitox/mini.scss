@@ -17,6 +17,10 @@ Estructura base que nos permite comenzar a trabajar el front-end de un proyecto 
 
 	<code>$ bower install mini.scss</code>
 	
+* Mediante NPM:
+	
+	<code>$ npm install mini.scss</code>
+
 ## Cómo usarlo: 
 
 En el directorio <code>scss/</code>, encontrarás el núcleo de mini.scss. Dicho directorio se divide en varias secciones:
