@@ -89,9 +89,20 @@ a {
   -result: PASS;
   -description: "Returns null"; }
 
+/* # map-fetch [function] ---------- */
+/* Should return the color value inside $args map */
+[data-module="map-fetch [function]"] [data-test="Should return the color value inside $args map"] .assert-true {
+  -result: PASS;
+  -description: "Returns green as the value color"; }
+
+/* Should return null, the value is not found */
+[data-module="map-fetch [function]"] [data-test="Should return null, the value is not found"] .assert-true {
+  -result: PASS;
+  -description: "Returns null"; }
+
 /* # SUMMARY ---------- */
-/* 6 Tests: */
-/*  - 6 Passed */
+/* 8 Tests: */
+/*  - 8 Passed */
 /*  - 0 Failed */
 /* -------------------- */
 

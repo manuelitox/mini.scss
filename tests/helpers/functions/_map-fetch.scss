@@ -1,0 +1,31 @@
+@include test-module('map-fetch [function]') {
+	
+	$args: (
+		'main': (
+			'color': green
+		)
+	);
+
+	@include test('Should return the color value inside $args map') {
+
+		$value: green;
+		$expect: if(map-fetch($args, 'main' 'color') == $value, true, false);
+
+	    @include assert-true(
+	    	$expect,
+			'Returns #{$value} as the value color');		
+
+	}
+
+	@include test('Should return null, the value is not found') {
+
+		$expect: map-fetch($args, 'main' 'bg');
+		$is-true: if($expect == null, true, false);
+
+	    @include assert-true(
+	    	$is-true,
+			'Returns null');
+
+	}
+
+}
