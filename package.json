@@ -5,7 +5,19 @@
   "license": "MIT",
   "homepage": "https://github.com/manuelitox/mini.scss",
   "description": "Base to build front end structures",
+  "main": "scss/main.scss",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manuelitox/mini.scss.git"
+  },
+  "author": " <hola@manuelitox.com>",
+  "bugs": {
+    "url": "https://github.com/manuelitox/mini.scss/issues"
+  },
   "dependencies": {
     "sass-true": "^2.0.2"
-  }
+  }  
 }
