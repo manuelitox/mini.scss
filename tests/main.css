@@ -67,9 +67,20 @@ a {
   -result: PASS;
   -description: "Returns a gray color #e6e6e6 that is different to #ccc"; }
 
+/* # has-value [function] ---------- */
+/* Should return the second value inside $args list. */
+[data-module="has-value [function]"] [data-test="Should return the second value inside $args list."] .assert-equal {
+  -result: PASS;
+  -description: "Returns item-2"; }
+
+/* Should return null, the value is not found or the value is empty */
+[data-module="has-value [function]"] [data-test="Should return null, the value is not found or the value is empty"] .assert-true {
+  -result: PASS;
+  -description: "Returns null"; }
+
 /* # SUMMARY ---------- */
-/* 2 Tests: */
-/*  - 2 Passed */
+/* 4 Tests: */
+/*  - 4 Passed */
 /*  - 0 Failed */
 /* -------------------- */
 
