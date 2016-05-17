@@ -170,11 +170,27 @@ a {
   [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint"] .expect body {
     content: 'small'; } }
 
+/* # font-face [Mixin] ---------- */
+/* Outputs the styles using font-face [Mixin] */
+@font-face {
+  [data-module="font-face [Mixin]"] [data-test="Outputs the styles using font-face [Mixin]"] [data-assert="Should output the appropriate styles to arial font-face"] .input {
+    font-family: "arial";
+    src: url("../fonts/arial.eot");
+    src: url("../fonts/arial.eot?#iefix") format("embedded-opentype"), url("../fonts/arial.woff2") format("woff2"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg#arial") format("svg");
+    font-style: normal;
+    font-weight: normal; } }
+@font-face {
+  [data-module="font-face [Mixin]"] [data-test="Outputs the styles using font-face [Mixin]"] [data-assert="Should output the appropriate styles to arial font-face"] .expect {
+    font-family: 'arial';
+    src: url("../fonts/arial.eot");
+    src: url("../fonts/arial.eot?#iefix") format("embedded-opentype"), url("../fonts/arial.woff2") format("woff2"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg#arial") format("svg");
+    font-style: normal;
+    font-weight: normal; } }
 /* # SUMMARY ---------- */
-/* 15 Tests: */
+/* 16 Tests: */
 /*  - 14 Passed */
 /*  - 0 Failed */
-/*  - 1 Output to CSS */
+/*  - 2 Output to CSS */
 /* -------------------- */
 
 /*# sourceMappingURL=main.css.map */
