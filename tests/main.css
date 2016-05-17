@@ -249,9 +249,20 @@ a {
   height: 150px;
   width: 100px; }
 
+/* # paths variable ---------- */
+/* Should return the value of 'img' in the paths variable */
+[data-module="paths variable"] [data-test="Should return the value of 'img' in the paths variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the ../img/ value"; }
+
+/* Should return the value of 'fonts' in the paths variable */
+[data-module="paths variable"] [data-test="Should return the value of 'fonts' in the paths variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the ../fonts/ value"; }
+
 /* # SUMMARY ---------- */
-/* 22 Tests: */
-/*  - 18 Passed */
+/* 24 Tests: */
+/*  - 20 Passed */
 /*  - 0 Failed */
 /*  - 4 Output to CSS */
 /* -------------------- */

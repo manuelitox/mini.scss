@@ -1,0 +1,21 @@
+@include test-module('paths variable') {
+	$paths-keys: 'img' 'fonts';
+	$paths-values: '../img/' '../fonts/';
+	
+	@each $element in $paths-keys {
+		$i: index($paths-keys, $element);
+	
+		@include test("Should return the value of '#{$element}' in the paths variable") {
+			
+			$actual: map-get($paths, $element);
+			$expected: nth($paths-values, $i);
+		
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} value');
+		
+		}
+		
+	}
+
+}
