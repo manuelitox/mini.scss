@@ -253,12 +253,12 @@ a {
 /* Should return the value of 'img' in the paths variable */
 [data-module="paths variable"] [data-test="Should return the value of 'img' in the paths variable"] .assert-equal {
   -result: PASS;
-  -description: "Returns the ../img/ value"; }
+  -description: "Returns the ../img/ path"; }
 
 /* Should return the value of 'fonts' in the paths variable */
 [data-module="paths variable"] [data-test="Should return the value of 'fonts' in the paths variable"] .assert-equal {
   -result: PASS;
-  -description: "Returns the ../fonts/ value"; }
+  -description: "Returns the ../fonts/ path"; }
 
 /* # SUMMARY ---------- */
 /* 24 Tests: */

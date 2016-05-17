@@ -12,7 +12,7 @@
 		
 			@include assert-equal(
 				$actual, $expected,
-				'Returns the #{$actual} value');
+				'Returns the #{$actual} path');
 		
 		}
 		
