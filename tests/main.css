@@ -186,11 +186,26 @@ a {
     src: url("../fonts/arial.eot?#iefix") format("embedded-opentype"), url("../fonts/arial.woff2") format("woff2"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg#arial") format("svg");
     font-style: normal;
     font-weight: normal; } }
+/* # sizes [Mixin] ---------- */
+/* Outputs the height and width using sizes [Mixin] */
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has only one argument."] .input {
+  height: 100px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has only one argument."] .expect {
+  height: 100px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has all arguments."] .input {
+  height: 150px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has all arguments."] .expect {
+  height: 150px;
+  width: 100px; }
+
 /* # SUMMARY ---------- */
-/* 16 Tests: */
+/* 17 Tests: */
 /*  - 14 Passed */
 /*  - 0 Failed */
-/*  - 2 Output to CSS */
+/*  - 3 Output to CSS */
 /* -------------------- */
 
 /*# sourceMappingURL=main.css.map */

@@ -1,0 +1,33 @@
+@include test-module('sizes [Mixin]') {
+	
+	@include test('Outputs the height and width using sizes [Mixin]') {
+		
+		@include assert("Should outputs the appropriate styles when the mixin has only one argument.") {
+			
+			@include input {
+				@include sizes(100px);
+			}
+			
+			@include expect {
+				height: 100px;
+				width: 100px;
+			}
+
+		}
+
+		@include assert("Should outputs the appropriate styles when the mixin has all arguments.") {
+			
+			@include input {
+				@include sizes(100px, 150px);
+			}
+			
+			@include expect {
+				height: 150px;
+				width: 100px;
+			}
+
+		}		
+
+	}
+
+}
