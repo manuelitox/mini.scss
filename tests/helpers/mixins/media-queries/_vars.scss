@@ -6,9 +6,14 @@
 		$i: index($breakpoints-keys, $element);
 	
 		@include test("Should return the value of '#{$element}' in breakpoints variable") {
+			
 			$actual: map-get($breakpoints, $element);
 			$expected: nth($breakpoints-values, $i);
-			@include assert-equal($actual, $expected);
+		
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} value');
+		
 		}
 		
 	}

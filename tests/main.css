@@ -104,32 +104,32 @@ a {
 /* Should return the value of 'xlarge' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of 'xlarge' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 1360px) value"; }
 
 /* Should return the value of 'large' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of 'large' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 1024px) value"; }
 
 /* Should return the value of '>=small<=medium' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of '>=small<=medium' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 240px) and (max-width: 1023px) value"; }
 
 /* Should return the value of '>=medium' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of '>=medium' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 600px) value"; }
 
 /* Should return the value of 'medium' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of 'medium' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 600px) and (max-width: 1023px) value"; }
 
 /* Should return the value of 'small' in breakpoints variable */
 [data-module="media queries options"] [data-test="Should return the value of 'small' in breakpoints variable"] .assert-equal {
   -result: PASS;
-  -description: ""; }
+  -description: "Returns the (min-width: 240px) and (max-width: 599px) value"; }
 
 /* # breakpoint [Mixin] ---------- */
 /* Outputs the styles using breakpoint [Mixin] */
