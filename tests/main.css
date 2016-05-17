@@ -67,6 +67,17 @@ a {
   -result: PASS;
   -description: "Returns a gray color #e6e6e6 that is different to #ccc"; }
 
+/* # Lighten color [function] ---------- */
+/* Should return the #333 color. */
+[data-module="Lighten color [function]"] [data-test="Should return the #333 color."] .assert-equal {
+  -result: PASS;
+  -description: "Returns the #333333 color"; }
+
+/* Should return the #1a1a1a color that is not equal to expected it */
+[data-module="Lighten color [function]"] [data-test="Should return the #1a1a1a color that is not equal to expected it"] .assert-unequal {
+  -result: PASS;
+  -description: "Returns the #1a1a1a color that is different to #333"; }
+
 /* # has-value [function] ---------- */
 /* Should return the second value inside $args list. */
 [data-module="has-value [function]"] [data-test="Should return the second value inside $args list."] .assert-equal {
@@ -79,8 +90,8 @@ a {
   -description: "Returns null"; }
 
 /* # SUMMARY ---------- */
-/* 4 Tests: */
-/*  - 4 Passed */
+/* 6 Tests: */
+/*  - 6 Passed */
 /*  - 0 Failed */
 /* -------------------- */
 
