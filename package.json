@@ -13,8 +13,11 @@
     "type": "git",
     "url": "git+https://github.com/manuelitox/mini.scss.git"
   },
-  "author": " <hola@manuelitox.com>",
+  "author": "Manuel Gonzalez <manuelitox@icloud.com>",
   "bugs": {
     "url": "https://github.com/manuelitox/mini.scss/issues"
-  }
+  },
+  "dependencies": {
+    "sass-true": "^2.0.2"
+  }  
 }

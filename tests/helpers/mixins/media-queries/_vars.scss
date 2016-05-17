@@ -1,0 +1,21 @@
+@include test-module('media queries options') {
+	$breakpoints-keys: 'xlarge' 'large' '>=small<=medium' '>=medium' 'medium' 'small';
+	$breakpoints-values: '(min-width: 1360px)' '(min-width: 1024px)' '(min-width: 240px) and (max-width: 1023px)' '(min-width: 600px)' '(min-width: 600px) and (max-width: 1023px)' '(min-width: 240px) and (max-width: 599px)';
+	
+	@each $element in $breakpoints-keys {
+		$i: index($breakpoints-keys, $element);
+	
+		@include test("Should return the value of '#{$element}' in breakpoints variable") {
+			
+			$actual: map-get($breakpoints, $element);
+			$expected: nth($breakpoints-values, $i);
+		
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} value');
+		
+		}
+		
+	}
+
+}

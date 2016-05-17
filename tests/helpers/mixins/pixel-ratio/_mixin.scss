@@ -1,0 +1,111 @@
+@include test-module('pixel-ratio [Mixin]') {
+
+	@include test('Outputs the styles using pixel-ratio [Mixin]') {
+
+		@include assert('Outputs the styles inside of the retina-4k ratio') {
+			
+			@include input {
+
+				@include pixel-ratio('retina-4k') {
+
+					body {
+						content: '4k';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+					body {
+						content: '4k';
+					}
+				}
+
+			}
+
+		}
+
+		@include assert('Outputs the styles inside of the retina-2k ratio') {
+			
+			@include input {
+
+				@include pixel-ratio('retina-2k') {
+
+					body {
+						content: '2k';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+					body {
+						content: '2k';
+					}
+				}
+
+			}
+
+		}	
+
+		@include assert('Outputs the styles inside of the normal-1.5k ratio') {
+			
+			@include input {
+
+				@include pixel-ratio('normal-1.5k') {
+
+					body {
+						content: '1.5k';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+					body {
+						content: '1.5k';
+					}
+				}
+
+			}
+
+		}	
+
+		@include assert('Outputs the styles inside of the normal ratio') {
+			
+			@include input {
+
+				@include pixel-ratio('normal') {
+
+					body {
+						content: '1k';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+					body {
+						content: '1k';
+					}
+				}
+
+			}
+
+		}						
+
+	}
+
+}

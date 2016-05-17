@@ -1,0 +1,25 @@
+@include test-module('Lighten color [function]') {
+	
+	@include test('Should return the #333 color.') {
+	
+		$actual: lighten-color(black, 20%);
+		$expect: #333;
+	
+		@include assert-equal(
+	    	$actual, $expect,
+			'Returns the #{$actual} color');
+	
+	}
+
+	@include test('Should return the #1a1a1a color that is not equal to expected it') {
+	
+		$actual: lighten-color(black, 10%);
+		$expect: #333;
+	
+		@include assert-unequal(
+			$actual, $expect,
+			'Returns the #{$actual} color that is different to #{$expect}');
+	
+	}
+
+}

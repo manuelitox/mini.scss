@@ -1,0 +1,25 @@
+@include test-module('Darken color [function]') {
+	
+	@include test('Should return gray color and be true.') {
+	
+		$actual: darken-color(white, 20%);
+		$expect: #ccc;
+	
+		@include assert-equal(
+	    	$actual, $expect,
+			'Returns the gray color');
+	
+	}
+
+	@include test('Should return a gray color but not equal to expected it') {
+	
+		$actual: darken-color(white, 10%);
+		$expect: #ccc;
+	
+		@include assert-unequal(
+			$actual, $expect,
+			'Returns a gray color #{$actual} that is different to #{$expect}');
+	
+	}
+
+}

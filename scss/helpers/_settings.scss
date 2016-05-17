@@ -11,23 +11,8 @@
 // 		big-gutter    : 30px	
 // 	)	
 // );
+
 $paths: (
 	img    : "../img/",
-	sprite : "../img/sprite.png",
 	fonts  : "../fonts/"
-) !default;
-
-$colors: (
-	black: #000,
-	white: #fff
-) !default;
-
-$fonts: (
-	text      : arial,
-	titles    : arial,
-	subtitles : arial,
-	sizes: (
-		normal : 16px,
-		small  : 14px
-	)
 ) !default;

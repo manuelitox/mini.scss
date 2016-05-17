@@ -1,0 +1,163 @@
+@include test-module('breakpoint [Mixin]') {
+
+	@include test('Outputs the styles using breakpoint [Mixin]') {
+	
+		@include assert('Outputs the styles inside of the min-width: 1024px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('large') {
+					
+					body {
+						content: 'large';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width: 1024px) {
+					body {
+						content: 'large';
+					}
+				} 
+
+			}
+
+		}
+
+		@include assert('Outputs the styles inside of the min-width: 1360px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('xlarge') {
+					
+					body {
+						content: 'xlarge';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width: 1360px) {
+					body {
+						content: 'xlarge';
+					}
+				} 
+
+			}
+
+		}
+
+		@include assert('Outputs the styles inside of the min-width: 240px and max-width: 1023px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('>=small<=medium') {
+					
+					body {
+						content: '>=small<=medium';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width:240px) and (max-width:1023px) {
+					body {
+						content: '>=small<=medium';
+					}
+				} 
+
+			}
+
+		}
+
+		@include assert('Outputs the styles inside of the min-width: 600px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('>=medium') {
+					
+					body {
+						content: '>=medium';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width:600px) {
+					body {
+						content: '>=medium';
+					}
+				} 
+
+			}
+
+		}
+
+		@include assert('Outputs the styles inside of the min-width: 600px and max-width: 1023px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('medium') {
+					
+					body {
+						content: 'medium';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width: 600px) and (max-width: 1023px) {
+					body {
+						content: 'medium';
+					}
+				} 
+
+			}
+
+		}	
+
+		@include assert('Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint') {
+			
+			@include input {
+			
+				@include breakpoint('small') {
+					
+					body {
+						content: 'small';
+					}
+
+				}
+			
+			}
+
+			@include expect {
+
+				@media(min-width: 240px) and (max-width: 599px) {
+					body {
+						content: 'small';
+					}
+				} 
+
+			}
+
+		}						
+
+	}
+
+}

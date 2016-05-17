@@ -10,31 +10,31 @@
 
 /// Detect pixel ratio
 ///
-/// @param $value hd-5x, hd-3x, hd-2x, md-15, md-13x, md.
+/// @param $value 'retina-4k', 'retina-2k', 'normal-1.5k', 'normal'
 ///
 /// @example scss - Basic Usage Sass
 ///    body {
-///      @include pixel-ratio("hd-3x") {
+///      @include pixel-ratio("retina-4k") {
 ///			   // stuff...
 ///      };
 ///    }
 ///
 /// @example scss - Basic Usage CSS Output
-/// 	@media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (-o-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi), only screen and (min-resolution: 3dppx) {
-///     body {
-///       // stuff... 
-///     } 
-///  	}
+/// @media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+///   body {
+/// 	// stuff...
+///   }
+/// }
 ///
 @mixin pixel-ratio($value) {
 	@if not map-has-key($ratios, $value) {
 		@error 'Pixel ratio value (#{$value}) is unknown';
 	}
 
-	@media only screen and (-webkit-min-device-pixel-ratio: map-fetch($ratios, $value)),
-		only screen and (-o-min-device-pixel-ratio: map-fetch($ratios, $value) / 1),
-		only screen and (min-resolution: #{round(map-fetch($ratios, $value) * 96)}dpi),
-		only screen and (min-resolution: #{map-fetch($ratios, $value)}dppx) {
+	@media only screen and (-webkit-min-device-pixel-ratio: map-get($ratios, $value)),
+		only screen and (-o-min-device-pixel-ratio: map-get($ratios, $value) / 1),
+		only screen and (min-resolution: #{round(map-get($ratios, $value) * 96)}dpi),
+		only screen and (min-resolution: #{map-get($ratios, $value)}dppx) {
 			@content;
 	}
 }

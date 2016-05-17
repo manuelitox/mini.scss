@@ -1,0 +1,27 @@
+@include test-module('has-value [function]') {
+
+	$args: ("item-1", "item-2", "item-3");
+	
+	@include test('Should return the second value inside $args list.') {
+		
+		$search: "item-2";
+		$expect: has-value($args, $search);
+
+		@include assert-equal(
+	    	$search, $expect,
+			'Returns item-2');
+
+	}
+
+	@include test('Should return null, the value is not found or the value is empty') {
+		
+		$search: "item-5";
+		$expect: if(has-value($args, $search) == null, true, false);
+
+		@include assert-true(
+			$expect, 
+			'Returns null');
+
+	}
+
+}

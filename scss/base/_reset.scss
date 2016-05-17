@@ -1,3 +1,13 @@
+$fonts: (
+	text      : arial,
+	titles    : arial,
+	subtitles : arial,
+	sizes: (
+		normal : 16px,
+		small  : 14px
+	)
+) !default;
+
 html {
 
 	@include breakpoint('large') {

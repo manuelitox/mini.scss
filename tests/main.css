@@ -1,0 +1,270 @@
+@media (min-width: 1024px) {
+  html {
+    font-size: 16px; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  html {
+    font-size: 14px; } }
+
+body {
+  line-height: 1.5;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0; }
+
+h2 {
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin: 0 0 20px; }
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: normal;
+  margin: 0 0 10px; }
+
+h4 {
+  font-size: 0.9rem;
+  font-weight: normal;
+  margin: 0 0 10px; }
+
+h5 {
+  font-size: 0.7rem;
+  font-weight: normal; }
+
+p {
+  margin: 0 0 20px 0; }
+
+img {
+  height: auto;
+  max-width: 100%; }
+
+figure {
+  margin: 0 0 20px 0;
+  padding: 0;
+  text-align: center; }
+
+figcaption {
+  display: block;
+  text-align: center;
+  font-size: 14px; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+/* # Darken color [function] ---------- */
+/* Should return gray color and be true. */
+[data-module="Darken color [function]"] [data-test="Should return gray color and be true."] .assert-equal {
+  -result: PASS;
+  -description: "Returns the gray color"; }
+
+/* Should return a gray color but not equal to expected it */
+[data-module="Darken color [function]"] [data-test="Should return a gray color but not equal to expected it"] .assert-unequal {
+  -result: PASS;
+  -description: "Returns a gray color #e6e6e6 that is different to #ccc"; }
+
+/* # Lighten color [function] ---------- */
+/* Should return the #333 color. */
+[data-module="Lighten color [function]"] [data-test="Should return the #333 color."] .assert-equal {
+  -result: PASS;
+  -description: "Returns the #333333 color"; }
+
+/* Should return the #1a1a1a color that is not equal to expected it */
+[data-module="Lighten color [function]"] [data-test="Should return the #1a1a1a color that is not equal to expected it"] .assert-unequal {
+  -result: PASS;
+  -description: "Returns the #1a1a1a color that is different to #333"; }
+
+/* # has-value [function] ---------- */
+/* Should return the second value inside $args list. */
+[data-module="has-value [function]"] [data-test="Should return the second value inside $args list."] .assert-equal {
+  -result: PASS;
+  -description: "Returns item-2"; }
+
+/* Should return null, the value is not found or the value is empty */
+[data-module="has-value [function]"] [data-test="Should return null, the value is not found or the value is empty"] .assert-true {
+  -result: PASS;
+  -description: "Returns null"; }
+
+/* # map-fetch [function] ---------- */
+/* Should return the color value inside $args map */
+[data-module="map-fetch [function]"] [data-test="Should return the color value inside $args map"] .assert-true {
+  -result: PASS;
+  -description: "Returns green as the value color"; }
+
+/* Should return null, the value is not found */
+[data-module="map-fetch [function]"] [data-test="Should return null, the value is not found"] .assert-true {
+  -result: PASS;
+  -description: "Returns null"; }
+
+/* # media queries options ---------- */
+/* Should return the value of 'xlarge' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'xlarge' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 1360px) value"; }
+
+/* Should return the value of 'large' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'large' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 1024px) value"; }
+
+/* Should return the value of '>=small<=medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of '>=small<=medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 240px) and (max-width: 1023px) value"; }
+
+/* Should return the value of '>=medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of '>=medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 600px) value"; }
+
+/* Should return the value of 'medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 600px) and (max-width: 1023px) value"; }
+
+/* Should return the value of 'small' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'small' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the (min-width: 240px) and (max-width: 599px) value"; }
+
+/* # breakpoint [Mixin] ---------- */
+/* Outputs the styles using breakpoint [Mixin] */
+@media (min-width: 1024px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 1024px breakpoint"] .input body {
+    content: 'large'; } }
+@media (min-width: 1024px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 1024px breakpoint"] .expect body {
+    content: 'large'; } }
+@media (min-width: 1360px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 1360px breakpoint"] .input body {
+    content: 'xlarge'; } }
+@media (min-width: 1360px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 1360px breakpoint"] .expect body {
+    content: 'xlarge'; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 1023px breakpoint"] .input body {
+    content: '>=small<=medium'; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 1023px breakpoint"] .expect body {
+    content: '>=small<=medium'; } }
+@media (min-width: 600px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 600px breakpoint"] .input body {
+    content: '>=medium'; } }
+@media (min-width: 600px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 600px breakpoint"] .expect body {
+    content: '>=medium'; } }
+@media (min-width: 600px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 600px and max-width: 1023px breakpoint"] .input body {
+    content: 'medium'; } }
+@media (min-width: 600px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 600px and max-width: 1023px breakpoint"] .expect body {
+    content: 'medium'; } }
+@media (min-width: 240px) and (max-width: 599px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint"] .input body {
+    content: 'small'; } }
+@media (min-width: 240px) and (max-width: 599px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint"] .expect body {
+    content: 'small'; } }
+
+/* # pixel ratios options ---------- */
+/* Should return the value of 'retina-4k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'retina-4k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 4 value"; }
+
+/* Should return the value of 'retina-2k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'retina-2k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 2 value"; }
+
+/* Should return the value of 'normal-1.5k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'normal-1.5k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 1.5 value"; }
+
+/* Should return the value of 'normal' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'normal' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 1 value"; }
+
+/* # pixel-ratio [Mixin] ---------- */
+/* Outputs the styles using pixel-ratio [Mixin] */
+@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-4k ratio"] .input body {
+    content: '4k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-4k ratio"] .expect body {
+    content: '4k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-2k ratio"] .input body {
+    content: '2k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-2k ratio"] .expect body {
+    content: '2k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal-1.5k ratio"] .input body {
+    content: '1.5k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal-1.5k ratio"] .expect body {
+    content: '1.5k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal ratio"] .input body {
+    content: '1k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal ratio"] .expect body {
+    content: '1k'; } }
+
+/* # font-face [Mixin] ---------- */
+/* Outputs the styles using font-face [Mixin] */
+@font-face {
+  [data-module="font-face [Mixin]"] [data-test="Outputs the styles using font-face [Mixin]"] [data-assert="Should output the appropriate styles to arial font-face"] .input {
+    font-family: "arial";
+    src: url("../fonts/arial.eot");
+    src: url("../fonts/arial.eot?#iefix") format("embedded-opentype"), url("../fonts/arial.woff2") format("woff2"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg#arial") format("svg");
+    font-style: normal;
+    font-weight: normal; } }
+@font-face {
+  [data-module="font-face [Mixin]"] [data-test="Outputs the styles using font-face [Mixin]"] [data-assert="Should output the appropriate styles to arial font-face"] .expect {
+    font-family: 'arial';
+    src: url("../fonts/arial.eot");
+    src: url("../fonts/arial.eot?#iefix") format("embedded-opentype"), url("../fonts/arial.woff2") format("woff2"), url("../fonts/arial.woff") format("woff"), url("../fonts/arial.ttf") format("truetype"), url("../fonts/arial.svg#arial") format("svg");
+    font-style: normal;
+    font-weight: normal; } }
+/* # sizes [Mixin] ---------- */
+/* Outputs the height and width using sizes [Mixin] */
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has only one argument."] .input {
+  height: 100px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has only one argument."] .expect {
+  height: 100px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has all arguments."] .input {
+  height: 150px;
+  width: 100px; }
+[data-module="sizes [Mixin]"] [data-test="Outputs the height and width using sizes [Mixin]"] [data-assert="Should outputs the appropriate styles when the mixin has all arguments."] .expect {
+  height: 150px;
+  width: 100px; }
+
+/* # paths variable ---------- */
+/* Should return the value of 'img' in the paths variable */
+[data-module="paths variable"] [data-test="Should return the value of 'img' in the paths variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the ../img/ path"; }
+
+/* Should return the value of 'fonts' in the paths variable */
+[data-module="paths variable"] [data-test="Should return the value of 'fonts' in the paths variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the ../fonts/ path"; }
+
+/* # SUMMARY ---------- */
+/* 24 Tests: */
+/*  - 20 Passed */
+/*  - 0 Failed */
+/*  - 4 Output to CSS */
+/* -------------------- */
+
+/*# sourceMappingURL=main.css.map */
