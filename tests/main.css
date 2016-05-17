@@ -100,10 +100,81 @@ a {
   -result: PASS;
   -description: "Returns null"; }
 
+/* # media queries options ---------- */
+/* Should return the value of 'xlarge' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'xlarge' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* Should return the value of 'large' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'large' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* Should return the value of '>=small<=medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of '>=small<=medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* Should return the value of '>=medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of '>=medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* Should return the value of 'medium' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'medium' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* Should return the value of 'small' in breakpoints variable */
+[data-module="media queries options"] [data-test="Should return the value of 'small' in breakpoints variable"] .assert-equal {
+  -result: PASS;
+  -description: ""; }
+
+/* # breakpoint [Mixin] ---------- */
+/* Outputs styles using breakpoint [Mixin] */
+@media (min-width: 1024px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 1024px breakpoint"] .input body {
+    content: 'large'; } }
+@media (min-width: 1024px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 1024px breakpoint"] .expect body {
+    content: 'large'; } }
+@media (min-width: 1360px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 1360px breakpoint"] .input body {
+    content: 'xlarge'; } }
+@media (min-width: 1360px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 1360px breakpoint"] .expect body {
+    content: 'xlarge'; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 240px and max-width: 1023px breakpoint"] .input body {
+    content: '>=small<=medium'; } }
+@media (min-width: 240px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 240px and max-width: 1023px breakpoint"] .expect body {
+    content: '>=small<=medium'; } }
+@media (min-width: 600px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 600px breakpoint"] .input body {
+    content: '>=medium'; } }
+@media (min-width: 600px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 600px breakpoint"] .expect body {
+    content: '>=medium'; } }
+@media (min-width: 600px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 600px and max-width: 1023px breakpoint"] .input body {
+    content: 'medium'; } }
+@media (min-width: 600px) and (max-width: 1023px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 600px and max-width: 1023px breakpoint"] .expect body {
+    content: 'medium'; } }
+@media (min-width: 240px) and (max-width: 599px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 240px and max-width: 599px breakpoint"] .input body {
+    content: 'small'; } }
+@media (min-width: 240px) and (max-width: 599px) {
+  [data-module="breakpoint [Mixin]"] [data-test="Outputs styles using breakpoint [Mixin]"] [data-assert="Outputs styles inside of the min-width: 240px and max-width: 599px breakpoint"] .expect body {
+    content: 'small'; } }
+
 /* # SUMMARY ---------- */
-/* 8 Tests: */
-/*  - 8 Passed */
+/* 15 Tests: */
+/*  - 14 Passed */
 /*  - 0 Failed */
+/*  - 1 Output to CSS */
 /* -------------------- */
 
 /*# sourceMappingURL=main.css.map */
