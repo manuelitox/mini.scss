@@ -5,7 +5,7 @@
 		$actual: darken-color(white, 20%);
 		$expect: #ccc;
 	
-	    @include assert-equal(
+		@include assert-equal(
 	    	$actual, $expect,
 			'Returns the gray color');
 	

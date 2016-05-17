@@ -5,7 +5,7 @@
 		$actual: lighten-color(black, 20%);
 		$expect: #333;
 	
-	    @include assert-equal(
+		@include assert-equal(
 	    	$actual, $expect,
 			'Returns the #{$actual} color');
 	

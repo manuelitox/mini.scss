@@ -11,7 +11,7 @@
 		$value: green;
 		$expect: if(map-fetch($args, 'main' 'color') == $value, true, false);
 
-	    @include assert-true(
+		@include assert-true(
 	    	$expect,
 			'Returns #{$value} as the value color');		
 
@@ -22,7 +22,7 @@
 		$expect: map-fetch($args, 'main' 'bg');
 		$is-true: if($expect == null, true, false);
 
-	    @include assert-true(
+		@include assert-true(
 	    	$is-true,
 			'Returns null');
 

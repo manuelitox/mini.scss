@@ -7,7 +7,7 @@
 		$search: "item-2";
 		$expect: has-value($args, $search);
 
-	    @include assert-equal(
+		@include assert-equal(
 	    	$search, $expect,
 			'Returns item-2');
 
