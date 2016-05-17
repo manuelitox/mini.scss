@@ -1,0 +1,21 @@
+@include test-module('pixel ratios options') {
+	$pixel-ratio-keys: 'retina-4k' 'retina-2k' 'normal-1.5k' 'normal';
+	$pixel-ratio-values: 4 2 1.5 1;
+	
+	@each $element in $pixel-ratio-keys {
+		$i: index($pixel-ratio-keys, $element);
+	
+		@include test("Should return the value of '#{$element}' in pixel-ratio variable") {
+			
+			$actual: map-get($ratios, $element);
+			$expected: nth($pixel-ratio-values, $i);
+			
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} value');
+
+		}
+		
+	}
+
+}

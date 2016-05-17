@@ -170,6 +170,54 @@ a {
   [data-module="breakpoint [Mixin]"] [data-test="Outputs the styles using breakpoint [Mixin]"] [data-assert="Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint"] .expect body {
     content: 'small'; } }
 
+/* # pixel ratios options ---------- */
+/* Should return the value of 'retina-4k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'retina-4k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 4 value"; }
+
+/* Should return the value of 'retina-2k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'retina-2k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 2 value"; }
+
+/* Should return the value of 'normal-1.5k' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'normal-1.5k' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 1.5 value"; }
+
+/* Should return the value of 'normal' in pixel-ratio variable */
+[data-module="pixel ratios options"] [data-test="Should return the value of 'normal' in pixel-ratio variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 1 value"; }
+
+/* # pixel-ratio [Mixin] ---------- */
+/* Outputs the styles using pixel-ratio [Mixin] */
+@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-4k ratio"] .input body {
+    content: '4k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 4), only screen and (-o-min-device-pixel-ratio: 4), only screen and (min-resolution: 384dpi), only screen and (min-resolution: 4dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-4k ratio"] .expect body {
+    content: '4k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-2k ratio"] .input body {
+    content: '2k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the retina-2k ratio"] .expect body {
+    content: '2k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal-1.5k ratio"] .input body {
+    content: '1.5k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (-o-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi), only screen and (min-resolution: 1.5dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal-1.5k ratio"] .expect body {
+    content: '1.5k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal ratio"] .input body {
+    content: '1k'; } }
+@media only screen and (-webkit-min-device-pixel-ratio: 1), only screen and (-o-min-device-pixel-ratio: 1), only screen and (min-resolution: 96dpi), only screen and (min-resolution: 1dppx) {
+  [data-module="pixel-ratio [Mixin]"] [data-test="Outputs the styles using pixel-ratio [Mixin]"] [data-assert="Outputs the styles inside of the normal ratio"] .expect body {
+    content: '1k'; } }
+
 /* # font-face [Mixin] ---------- */
 /* Outputs the styles using font-face [Mixin] */
 @font-face {
@@ -202,10 +250,10 @@ a {
   width: 100px; }
 
 /* # SUMMARY ---------- */
-/* 17 Tests: */
-/*  - 14 Passed */
+/* 22 Tests: */
+/*  - 18 Passed */
 /*  - 0 Failed */
-/*  - 3 Output to CSS */
+/*  - 4 Output to CSS */
 /* -------------------- */
 
 /*# sourceMappingURL=main.css.map */
