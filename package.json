@@ -19,5 +19,8 @@
   },
   "dependencies": {
     "sass-true": "^2.0.2"
-  }  
+  },
+  "devDependencies": {
+    "susy": "^2.2.12"
+  }
 }
