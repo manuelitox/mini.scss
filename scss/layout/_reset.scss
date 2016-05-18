@@ -1,0 +1,41 @@
+@if ($miniscss-gen-default-styles) {
+
+	*, *:after, *:before {
+		box-sizing: border-box;
+	}
+
+	html {
+
+		@include breakpoint('large') {
+			font-size: map-get($miniscss-font-sizes, 'normal');
+		}
+
+		@include breakpoint('>=small<=medium') {
+			font-size: map-get($miniscss-font-sizes, 'small');
+		}
+	}
+
+	body {
+		line-height: 1.5;
+		margin: 0;
+		padding: 0;
+	}
+
+	img {
+		height: auto;
+		max-width: 100%;
+	}
+
+	figure {
+		margin: 0 0 20px 0;
+		padding: 0;
+		text-align: center;
+	}
+
+	figcaption {
+		display: block;
+		text-align: center;
+		font-size: .8rem;
+	}
+
+}

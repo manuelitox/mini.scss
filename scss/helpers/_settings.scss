@@ -1,4 +1,19 @@
-$paths: (
+$miniscss-paths: (
 	img    : "../img/",
 	fonts  : "../fonts/"
 ) !default;
+
+$miniscss-font-family: (
+	'text'      : arial,
+	'titles'    : arial,
+	'subtitles' : arial
+) !default;
+
+$miniscss-font-sizes: (
+	normal : 16px,
+	small  : 14px
+) !default;
+
+// Generate styles to 
+// adjusts default values.
+$miniscss-gen-default-styles: true !default;
