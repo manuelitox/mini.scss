@@ -1,5 +1,7 @@
 # Mini.scss
 
+[![Build Status](https://travis-ci.org/manuelitox/mini.scss.svg?branch=master)](https://travis-ci.org/manuelitox/mini.scss)
+
 Allows us start to write Sass code quick and easily. It's simple, Mini.scss is a basic structure, nothing else.
 
 ### Install:
