@@ -1,6 +1,6 @@
 $miniscss-paths: (
-	img    : "../img/",
-	fonts  : "../fonts/"
+	'img'    : "../img/",
+	'fonts'  : "../fonts/"
 ) !default;
 
 $miniscss-font-family: (
@@ -10,8 +10,8 @@ $miniscss-font-family: (
 ) !default;
 
 $miniscss-font-sizes: (
-	normal : 16px,
-	small  : 14px
+	'normal' : 16px,
+	'small'  : 14px
 ) !default;
 
 // Generate styles to 
