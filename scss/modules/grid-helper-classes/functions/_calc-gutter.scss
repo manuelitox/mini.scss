@@ -1,9 +1,0 @@
-// Calculate gutter of columns
-//
-// @param $gutter
-//
-// calc-gutter($gutter);
-//
-@function calc-gutter($gutter) {
-  	@return ($gutter / 2);
-}
