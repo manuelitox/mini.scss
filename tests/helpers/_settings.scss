@@ -7,7 +7,7 @@
 	
 		@include test("Should return the value of '#{$element}' in the paths variable") {
 			
-			$actual: map-get($paths, $element);
+			$actual: map-get($miniscss-paths, $element);
 			$expected: nth($paths-values, $i);
 		
 			@include assert-equal(
@@ -18,4 +18,47 @@
 		
 	}
 
+}
+
+@include test-module('font-family variable') {
+	$font-family-keys: 'text' 'titles' 'subtitles';
+	$font-family-values: arial arial arial;
+
+	@each $element in $font-family-keys {
+		$i: index($font-family-keys, $element);
+	
+		@include test("Should return the value of '#{$element}' in the font-family variable") {
+			
+			$actual: map-get($miniscss-font-family, $element);
+			$expected: nth($font-family-values, $i);
+		
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} font-family');
+		
+		}
+		
+	}
+
+}
+
+@include test-module('font-sizes variable') {
+	$font-sizes-keys: 'normal' 'small';
+	$font-sizes-values: 16px 14px;
+
+	@each $element in $font-sizes-keys {
+		$i: index($font-sizes-keys, $element);
+	
+		@include test("Should return the value of '#{$element}' in the font-sizes variable") {
+			
+			$actual: map-get($miniscss-font-sizes, $element);
+			$expected: nth($font-sizes-values, $i);
+		
+			@include assert-equal(
+				$actual, $expected,
+				'Returns the #{$actual} font-family');
+		
+		}
+		
+	}	
 }

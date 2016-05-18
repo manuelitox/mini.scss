@@ -1,3 +1,6 @@
+*, *:after, *:before {
+  box-sizing: border-box; }
+
 @media (min-width: 1024px) {
   html {
     font-size: 16px; } }
@@ -9,33 +12,6 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0; }
-
-h1 {
-  font-size: 2rem;
-  font-weight: normal;
-  margin: 0; }
-
-h2 {
-  font-size: 1.6rem;
-  font-weight: normal;
-  margin: 0 0 20px; }
-
-h3 {
-  font-size: 1.4rem;
-  font-weight: normal;
-  margin: 0 0 10px; }
-
-h4 {
-  font-size: 0.9rem;
-  font-weight: normal;
-  margin: 0 0 10px; }
-
-h5 {
-  font-size: 0.7rem;
-  font-weight: normal; }
-
-p {
-  margin: 0 0 20px 0; }
 
 img {
   height: auto;
@@ -49,12 +25,7 @@ figure {
 figcaption {
   display: block;
   text-align: center;
-  font-size: 14px; }
-
-a {
-  text-decoration: none; }
-  a:hover {
-    text-decoration: underline; }
+  font-size: .8rem; }
 
 /* # Darken color [function] ---------- */
 /* Should return gray color and be true. */
@@ -260,9 +231,36 @@ a {
   -result: PASS;
   -description: "Returns the ../fonts/ path"; }
 
+/* # font-family variable ---------- */
+/* Should return the value of 'text' in the font-family variable */
+[data-module="font-family variable"] [data-test="Should return the value of 'text' in the font-family variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the arial font-family"; }
+
+/* Should return the value of 'titles' in the font-family variable */
+[data-module="font-family variable"] [data-test="Should return the value of 'titles' in the font-family variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the arial font-family"; }
+
+/* Should return the value of 'subtitles' in the font-family variable */
+[data-module="font-family variable"] [data-test="Should return the value of 'subtitles' in the font-family variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the arial font-family"; }
+
+/* # font-sizes variable ---------- */
+/* Should return the value of 'normal' in the font-sizes variable */
+[data-module="font-sizes variable"] [data-test="Should return the value of 'normal' in the font-sizes variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 16px font-family"; }
+
+/* Should return the value of 'small' in the font-sizes variable */
+[data-module="font-sizes variable"] [data-test="Should return the value of 'small' in the font-sizes variable"] .assert-equal {
+  -result: PASS;
+  -description: "Returns the 14px font-family"; }
+
 /* # SUMMARY ---------- */
-/* 24 Tests: */
-/*  - 20 Passed */
+/* 29 Tests: */
+/*  - 25 Passed */
 /*  - 0 Failed */
 /*  - 4 Output to CSS */
 /* -------------------- */
