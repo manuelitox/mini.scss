@@ -8,6 +8,10 @@ $fonts: (
 	)
 ) !default;
 
+*, *:after, *:before {
+	box-sizing: border-box;
+}
+
 html {
 
 	@include breakpoint('large') {
