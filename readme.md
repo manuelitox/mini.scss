@@ -1,8 +1,8 @@
-#Estructura básica Front end creada en Sass. 
+# Mini.scss
 
-Estructura base que nos permite comenzar a trabajar el front-end de un proyecto de una manera rápida y agradable. No establece por defecto ningún patrón de diseño para atributos/elementos. Mini.scss, es un facilitador, te brinda una estructura profesional en pocos minutos. 
+Allows us start to write Sass code quick and easily. It's simple, Mini.scss is a basic structure, nothing else.
 
-## Instalación:
+### Install:
 
 * By Github, you've two ways: 
 
