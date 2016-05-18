@@ -18,9 +18,7 @@
     "url": "https://github.com/manuelitox/mini.scss/issues"
   },
   "dependencies": {
-    "sass-true": "^2.0.2"
-  },
-  "devDependencies": {
+    "sass-true": "^2.0.2",
     "susy": "^2.2.12"
   }
 }
