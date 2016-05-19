@@ -1,7 +1,7 @@
 {
   "title": "Mini scss",
   "name": "mini.scss",
-  "version": "1.4.3",
+  "version": "1.4.4",
   "license": "MIT",
   "homepage": "https://github.com/manuelitox/mini.scss",
   "description": "Base to build front end structures",
@@ -18,7 +18,6 @@
     "url": "https://github.com/manuelitox/mini.scss/issues"
   },
   "dependencies": {
-    "sass-true": "^2.0.2",
-    "susy": "^2.2.12"
+    "sass-true": "^2.0.2"
   }
 }
