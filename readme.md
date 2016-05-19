@@ -24,4 +24,12 @@ Allows us start to write Sass code quick and easily. It's simple, Mini.scss is a
 
 #### You can find the documentation in the <code>sassdoc/index.html</code> file.
 
+### How to use:
 
+After install the package, you need import the 'main.scss' file to your project:
+
+<code>import 'path/to/mini.scss/library/mini.scss/scss/main';</code>
+
+### FYI:
+
+* Deleted the grid system. Instead, I recommend use [Susy - Responsive layout toolkit for Sass ](https://github.com/oddbird/susy). You can install it by npm: `$ npm install susy --save-dev`
