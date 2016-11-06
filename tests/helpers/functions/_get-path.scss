@@ -1,0 +1,25 @@
+@include test-module('get-path [function]') {
+
+	@include test('Should return the value path inside $args map') {
+
+		$value: '../img/';
+		$expect: if(get-path('img') == $value, true, false);
+
+		@include assert-true(
+	    	$expect,
+			'Returns #{$value} as the value path');
+
+	}
+
+	@include test('Should return null, the value is not found') {
+
+		$expect: get-path('foo');
+		$is-true: if($expect == null, true, false);
+
+		@include assert-true(
+	    	$is-true,
+			'Returns null');
+
+	}
+
+}

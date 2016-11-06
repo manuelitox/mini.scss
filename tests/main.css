@@ -103,6 +103,15 @@ figcaption {
 /*   ✔ Returns null */
 /*  */
 /*  */
+/* # Module: get-path [function] */
+/* ----------------------------- */
+/* Test: Should return the value path inside $args map */
+/*   ✔ Returns ../img/ as the value path */
+/*  */
+/* Test: Should return null, the value is not found */
+/*   ✔ Returns null */
+/*  */
+/*  */
 /* # Module: media queries options */
 /* ------------------------------- */
 /* Test: Should return the value of 'xlarge' in breakpoints variable */
@@ -348,8 +357,8 @@ figcaption {
 /*  */
 /*  */
 /* # SUMMARY ---------- */
-/* 40 Tests: */
-/*  - 27 Passed */
+/* 42 Tests: */
+/*  - 29 Passed */
 /*  - 0 Failed */
 /*  - 13 Output to CSS */
 /* -------------------- */

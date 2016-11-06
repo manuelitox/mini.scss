@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------
+
+  // Get Path
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy to get a value of a path.
+/// @param $key key list
+///
+/// $paths : (
+///     'image': 'images/'
+/// ) !default;
+///
+/// @example scss - Basic Usage Sass
+///    body:after {
+///      content: get-path('image');
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body:after {
+///      content: 'images/';
+///    }
+@function get-path($key) {
+	@return map-get($miniscss-path-map-name, $key);
+}

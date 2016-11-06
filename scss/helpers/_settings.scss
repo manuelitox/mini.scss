@@ -21,8 +21,10 @@ $miniscss-colors: (
 ) !default;
 
 // By default name
-// of color map.
+// of variables of
+// colors and paths.
 $miniscss-color-map-name: $miniscss-colors !default;
+$miniscss-path-map-name: $miniscss-paths !default;
 
 // Generate styles to
 // adjusts default values.
