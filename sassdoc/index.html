@@ -72,6 +72,15 @@
             
           
             
+            <li class="sidebar__item  sassdoc__item" data-name="get-path" data-type="function">
+              <a href="#function-get-path">get-path
+              
+              
+              </a>
+            </li>
+            
+          
+            
             <li class="sidebar__item  sassdoc__item" data-name="has-value" data-type="function">
               <a href="#function-has-value">has-value
               
@@ -541,6 +550,193 @@
     
     <pre class="example__code"><code class="language-scss">   body {
      color: #FFF;
+   }</code></pre>
+  </div>
+  
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+
+
+
+
+  
+    
+    
+
+  
+    
+    
+  
+    
+    
+  <h3 class="item__sub-heading">Author</h3>
+
+  <ul class="list-unstyled">
+    
+      <li><p>Manuel Gonzalez</p>
+</li>
+    
+  </ul>
+
+
+  
+
+
+
+</section>
+              
+                <section class="main__item  item" id="function-get-path">
+
+<h3 class="item__heading">
+  
+
+  <a class="item__name" href="#function-get-path">get-path</a>
+
+  
+
+  
+</h3>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+    
+  
+
+
+<div class="relative  clear  code--collapsed">
+  <pre class="item__code  item__code--togglable  language-scss"
+    data-current-state="collapsed"
+    data-expanded="@function get-path($key) { 
+	@return map-get($miniscss-path-map-name, $key);
+ }"
+    data-collapsed="@function get-path($key) { ... }"><code>@function get-path($key) { ... }</code></pre>
+
+  
+</div>
+
+
+
+
+
+
+  
+    
+    
+  <h3 class="item__sub-heading">Description</h3>
+
+  <div class="item__description"><p>A way easy to get a value of a path.</p>
+</div>
+
+
+  
+    
+    <h3 class="item__sub-heading">Parameters</h3>
+
+
+
+  <table class="item__parameters">
+    <thead>
+      <tr>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Name</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Description</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Type</th>
+        <th scope="col"><span class="visually-hidden"> parameter </span>Default value</th>
+      </tr>
+    </thead>
+    <tbody>
+      
+        <tr class="item__parameter">
+          <th scope="row" data-label="name"><code>$key</code></th>
+          <td data-label="desc"><p>key list</p>
+<p>$paths : (
+    &#39;image&#39;: &#39;images/&#39;
+) !default;</p>
+</td>
+          <td data-label="type">
+          
+            
+          
+          </td>
+          <td data-label="default">
+          
+            &mdash;<span class="visually-hidden"> none</span>
+          
+          </td>
+        </tr>
+      
+    </tbody>
+  </table>
+
+
+
+  
+    
+    
+
+  
+    
+    
+  <h3 class="item__sub-heading">Example</h3>
+
+  
+  <div class="item__example  example">
+    
+    <div class="example__description"><p>Basic Usage Sass</p>
+</div>
+    
+    <pre class="example__code"><code class="language-scss">   body:after {
+     content: get-path(&#39;image&#39;);
+   }</code></pre>
+  </div>
+  
+  <div class="item__example  example">
+    
+    <div class="example__description"><p>Basic Usage CSS Output</p>
+</div>
+    
+    <pre class="example__code"><code class="language-scss">   body:after {
+     content: &#39;images/&#39;;
    }</code></pre>
   </div>
   
