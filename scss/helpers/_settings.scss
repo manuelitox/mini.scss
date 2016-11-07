@@ -14,6 +14,19 @@ $miniscss-font-sizes: (
 	'small'  : 14px
 ) !default;
 
-// Generate styles to 
+
+$miniscss-colors: (
+	'base' : green,
+	'text' : black
+) !default;
+
+// By default name
+// of variables of
+// colors and paths.
+$miniscss-color-map-name: $miniscss-colors !default;
+$miniscss-path-map-name: $miniscss-paths !default;
+$miniscss-font-map-name: $miniscss-font-family !default;
+
+// Generate styles to
 // adjusts default values.
 $miniscss-gen-default-styles: true !default;

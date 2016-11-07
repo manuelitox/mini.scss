@@ -1,0 +1,25 @@
+@include test-module('get-color [function]') {
+
+	@include test('Should return the color value inside $args map') {
+
+		$value: green;
+		$expect: if(get-color('base') == $value, true, false);
+
+		@include assert-true(
+	    	$expect,
+			'Returns #{$value} as the value color');
+
+	}
+
+	@include test('Should return null, the value is not found') {
+
+		$expect: get-color('bg');
+		$is-true: if($expect == null, true, false);
+
+		@include assert-true(
+	    	$is-true,
+			'Returns null');
+
+	}
+
+}

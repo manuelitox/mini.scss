@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------
+
+  // Get Color
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy to get a value of a color.
+/// @param $key key list
+///
+/// $colors : (
+///     'base': #FFF
+/// ) !default;
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      color: get-color('base');
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      color: #FFF;
+///    }
+@function get-color($key) {
+	@return map-get($miniscss-color-map-name, $key);
+}

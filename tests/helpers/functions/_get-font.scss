@@ -1,0 +1,25 @@
+@include test-module('get-font [function]') {
+
+	@include test('Should return the font value inside $args map') {
+
+		$value: arial;
+		$expect: if(get-font('text') == $value, true, false);
+
+		@include assert-true(
+	    	$expect,
+			'Returns #{$value} as the value font');
+
+	}
+
+	@include test('Should return null, the value is not found') {
+
+		$expect: get-font('foo');
+		$is-true: if($expect == null, true, false);
+
+		@include assert-true(
+	    	$is-true,
+			'Returns null');
+
+	}
+
+}

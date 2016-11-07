@@ -1,19 +1,19 @@
 @include test-module('breakpoint [Mixin]') {
 
 	@include test('Outputs the styles using breakpoint [Mixin]') {
-	
+
 		@include assert('Outputs the styles inside of the min-width: 1024px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('large') {
-					
+
 					body {
 						content: 'large';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -22,24 +22,24 @@
 					body {
 						content: 'large';
 					}
-				} 
+				}
 
 			}
 
 		}
 
 		@include assert('Outputs the styles inside of the min-width: 1360px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('xlarge') {
-					
+
 					body {
 						content: 'xlarge';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -48,24 +48,24 @@
 					body {
 						content: 'xlarge';
 					}
-				} 
+				}
 
 			}
 
 		}
 
 		@include assert('Outputs the styles inside of the min-width: 240px and max-width: 1023px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('>=small<=medium') {
-					
+
 					body {
 						content: '>=small<=medium';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -74,24 +74,24 @@
 					body {
 						content: '>=small<=medium';
 					}
-				} 
+				}
 
 			}
 
 		}
 
 		@include assert('Outputs the styles inside of the min-width: 600px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('>=medium') {
-					
+
 					body {
 						content: '>=medium';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -100,24 +100,24 @@
 					body {
 						content: '>=medium';
 					}
-				} 
+				}
 
 			}
 
 		}
 
 		@include assert('Outputs the styles inside of the min-width: 600px and max-width: 1023px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('medium') {
-					
+
 					body {
 						content: 'medium';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -126,24 +126,24 @@
 					body {
 						content: 'medium';
 					}
-				} 
+				}
 
 			}
 
-		}	
+		}
 
 		@include assert('Outputs the styles inside of the min-width: 240px and max-width: 599px breakpoint') {
-			
-			@include input {
-			
+
+			@include output {
+
 				@include breakpoint('small') {
-					
+
 					body {
 						content: 'small';
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -152,11 +152,11 @@
 					body {
 						content: 'small';
 					}
-				} 
+				}
 
 			}
 
-		}						
+		}
 
 	}
 

@@ -3,8 +3,8 @@
 	@include test('Outputs the styles using pixel-ratio [Mixin]') {
 
 		@include assert('Outputs the styles inside of the retina-4k ratio') {
-			
-			@include input {
+
+			@include output {
 
 				@include pixel-ratio('retina-4k') {
 
@@ -13,7 +13,7 @@
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -29,8 +29,8 @@
 		}
 
 		@include assert('Outputs the styles inside of the retina-2k ratio') {
-			
-			@include input {
+
+			@include output {
 
 				@include pixel-ratio('retina-2k') {
 
@@ -39,7 +39,7 @@
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -52,11 +52,11 @@
 
 			}
 
-		}	
+		}
 
 		@include assert('Outputs the styles inside of the normal-1.5k ratio') {
-			
-			@include input {
+
+			@include output {
 
 				@include pixel-ratio('normal-1.5k') {
 
@@ -65,7 +65,7 @@
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -78,11 +78,11 @@
 
 			}
 
-		}	
+		}
 
 		@include assert('Outputs the styles inside of the normal ratio') {
-			
-			@include input {
+
+			@include output {
 
 				@include pixel-ratio('normal') {
 
@@ -91,7 +91,7 @@
 					}
 
 				}
-			
+
 			}
 
 			@include expect {
@@ -104,7 +104,7 @@
 
 			}
 
-		}						
+		}
 
 	}
 

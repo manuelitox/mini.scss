@@ -1,15 +1,15 @@
 @include test-module('font-face [Mixin]') {
-	
+
 	@include test('Outputs the styles using font-face [Mixin]') {
-		
+
 		@include assert("Should output the appropriate styles to arial font-face") {
-			
-			@include input {
+
+			@include output {
 				@include font-face('arial');
 			}
-			
+
 			@include expect {
-				
+
 				@font-face {
 					font-family: 'arial';
 					src: url('../fonts/arial.eot');
@@ -18,8 +18,8 @@
 						 url('../fonts/arial.woff') format('woff'),
 						 url('../fonts/arial.ttf') format('truetype'),
 						 url('../fonts/arial.svg#arial') format('svg');
-					font-style: normal; 
-					font-weight: normal;					
+					font-style: normal;
+					font-weight: normal;
 				}
 
 			}
