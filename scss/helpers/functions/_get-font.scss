@@ -1,0 +1,29 @@
+// ----------------------------------------------------------------------
+
+  // Get Font
+
+// ----------------------------------------------------------------------
+
+////
+/// @author Manuel Gonzalez
+////
+
+/// A way easy to get a value of a font.
+/// @param $key key list
+///
+/// $fonts : (
+///     'base': arial
+/// ) !default;
+///
+/// @example scss - Basic Usage Sass
+///    body {
+///      font-family: get-font('base');
+///    }
+///
+/// @example scss - Basic Usage CSS Output
+///    body {
+///      font-family: arial;
+///    }
+@function get-font($key) {
+	@return map-get($miniscss-font-map-name, $key);
+}

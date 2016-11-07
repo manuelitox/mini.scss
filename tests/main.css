@@ -112,6 +112,15 @@ figcaption {
 /*   ✔ Returns null */
 /*  */
 /*  */
+/* # Module: get-font [function] */
+/* ----------------------------- */
+/* Test: Should return the font value inside $args map */
+/*   ✔ Returns arial as the value font */
+/*  */
+/* Test: Should return null, the value is not found */
+/*   ✔ Returns null */
+/*  */
+/*  */
 /* # Module: media queries options */
 /* ------------------------------- */
 /* Test: Should return the value of 'xlarge' in breakpoints variable */
@@ -357,8 +366,8 @@ figcaption {
 /*  */
 /*  */
 /* # SUMMARY ---------- */
-/* 42 Tests: */
-/*  - 29 Passed */
+/* 44 Tests: */
+/*  - 31 Passed */
 /*  - 0 Failed */
 /*  - 13 Output to CSS */
 /* -------------------- */
